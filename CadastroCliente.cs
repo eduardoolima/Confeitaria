@@ -17,14 +17,8 @@ namespace Confeitaria
             InitializeComponent();
         }
 
-        private void lblDataNascimento_Click(object sender, EventArgs e)
-        {
 
-        }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
 
-        }
     }
 }

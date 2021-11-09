@@ -40,14 +40,21 @@ namespace Confeitaria
             this.lblRua = new System.Windows.Forms.Label();
             this.lblCep = new System.Windows.Forms.Label();
             this.lblNumero = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.txtCidade = new System.Windows.Forms.TextBox();
+            this.txtBairro = new System.Windows.Forms.TextBox();
+            this.txtRua = new System.Windows.Forms.TextBox();
+            this.txtCep = new System.Windows.Forms.TextBox();
             this.dtpDataNascimento = new System.Windows.Forms.DateTimePicker();
+            this.lblTelefone = new System.Windows.Forms.Label();
+            this.nudNumero = new System.Windows.Forms.NumericUpDown();
+            this.lbTelefones = new System.Windows.Forms.ListBox();
+            this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.btnAddTelefone = new System.Windows.Forms.Button();
+            this.btnGravar = new System.Windows.Forms.Button();
+            this.btnVoltar = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.nudNumero)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNomeCliente
@@ -99,7 +106,7 @@ namespace Confeitaria
             this.lblEndereco.AutoSize = true;
             this.lblEndereco.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lblEndereco.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.lblEndereco.Location = new System.Drawing.Point(12, 263);
+            this.lblEndereco.Location = new System.Drawing.Point(12, 280);
             this.lblEndereco.Name = "lblEndereco";
             this.lblEndereco.Size = new System.Drawing.Size(144, 40);
             this.lblEndereco.TabIndex = 4;
@@ -110,7 +117,7 @@ namespace Confeitaria
             this.lblCidade.AutoSize = true;
             this.lblCidade.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblCidade.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.lblCidade.Location = new System.Drawing.Point(36, 319);
+            this.lblCidade.Location = new System.Drawing.Point(36, 336);
             this.lblCidade.Name = "lblCidade";
             this.lblCidade.Size = new System.Drawing.Size(77, 30);
             this.lblCidade.TabIndex = 5;
@@ -121,7 +128,7 @@ namespace Confeitaria
             this.lblBairro.AutoSize = true;
             this.lblBairro.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblBairro.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.lblBairro.Location = new System.Drawing.Point(36, 361);
+            this.lblBairro.Location = new System.Drawing.Point(36, 378);
             this.lblBairro.Name = "lblBairro";
             this.lblBairro.Size = new System.Drawing.Size(67, 30);
             this.lblBairro.TabIndex = 6;
@@ -132,7 +139,7 @@ namespace Confeitaria
             this.lblRua.AutoSize = true;
             this.lblRua.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblRua.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.lblRua.Location = new System.Drawing.Point(36, 402);
+            this.lblRua.Location = new System.Drawing.Point(36, 419);
             this.lblRua.Name = "lblRua";
             this.lblRua.Size = new System.Drawing.Size(49, 30);
             this.lblRua.TabIndex = 7;
@@ -144,7 +151,7 @@ namespace Confeitaria
             this.lblCep.AutoSize = true;
             this.lblCep.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblCep.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.lblCep.Location = new System.Drawing.Point(36, 441);
+            this.lblCep.Location = new System.Drawing.Point(36, 458);
             this.lblCep.Name = "lblCep";
             this.lblCep.Size = new System.Drawing.Size(49, 30);
             this.lblCep.TabIndex = 8;
@@ -155,67 +162,59 @@ namespace Confeitaria
             this.lblNumero.AutoSize = true;
             this.lblNumero.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.lblNumero.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.lblNumero.Location = new System.Drawing.Point(512, 402);
+            this.lblNumero.Location = new System.Drawing.Point(450, 418);
             this.lblNumero.Name = "lblNumero";
             this.lblNumero.Size = new System.Drawing.Size(37, 30);
             this.lblNumero.TabIndex = 9;
             this.lblNumero.Text = "N°";
             // 
-            // textBox1
+            // txtEmail
             // 
-            this.textBox1.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.textBox1.Location = new System.Drawing.Point(157, 117);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(444, 23);
-            this.textBox1.TabIndex = 10;
+            this.txtEmail.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.txtEmail.Location = new System.Drawing.Point(157, 117);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(444, 23);
+            this.txtEmail.TabIndex = 10;
             // 
-            // textBox2
+            // txtNome
             // 
-            this.textBox2.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.textBox2.Location = new System.Drawing.Point(157, 73);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(444, 23);
-            this.textBox2.TabIndex = 11;
+            this.txtNome.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.txtNome.Location = new System.Drawing.Point(157, 73);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(444, 23);
+            this.txtNome.TabIndex = 11;
             // 
-            // textBox3
+            // txtCidade
             // 
-            this.textBox3.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.textBox3.Location = new System.Drawing.Point(119, 328);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(322, 23);
-            this.textBox3.TabIndex = 12;
+            this.txtCidade.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.txtCidade.Location = new System.Drawing.Point(119, 345);
+            this.txtCidade.Name = "txtCidade";
+            this.txtCidade.Size = new System.Drawing.Size(322, 23);
+            this.txtCidade.TabIndex = 12;
             // 
-            // textBox4
+            // txtBairro
             // 
-            this.textBox4.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.textBox4.Location = new System.Drawing.Point(119, 370);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(322, 23);
-            this.textBox4.TabIndex = 13;
+            this.txtBairro.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.txtBairro.Location = new System.Drawing.Point(119, 387);
+            this.txtBairro.Name = "txtBairro";
+            this.txtBairro.Size = new System.Drawing.Size(322, 23);
+            this.txtBairro.TabIndex = 13;
             // 
-            // textBox5
+            // txtRua
             // 
-            this.textBox5.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.textBox5.Location = new System.Drawing.Point(119, 409);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(322, 23);
-            this.textBox5.TabIndex = 14;
+            this.txtRua.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.txtRua.Location = new System.Drawing.Point(119, 426);
+            this.txtRua.Name = "txtRua";
+            this.txtRua.Size = new System.Drawing.Size(322, 23);
+            this.txtRua.TabIndex = 14;
             // 
-            // textBox6
+            // txtCep
             // 
-            this.textBox6.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.textBox6.Location = new System.Drawing.Point(119, 450);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(322, 23);
-            this.textBox6.TabIndex = 15;
-            // 
-            // textBox7
-            // 
-            this.textBox7.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.textBox7.Location = new System.Drawing.Point(555, 409);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 23);
-            this.textBox7.TabIndex = 16;
+            this.txtCep.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.txtCep.Location = new System.Drawing.Point(119, 467);
+            this.txtCep.Name = "txtCep";
+            this.txtCep.Size = new System.Drawing.Size(322, 23);
+            this.txtCep.TabIndex = 15;
             // 
             // dtpDataNascimento
             // 
@@ -226,19 +225,97 @@ namespace Confeitaria
             this.dtpDataNascimento.Size = new System.Drawing.Size(109, 23);
             this.dtpDataNascimento.TabIndex = 17;
             // 
+            // lblTelefone
+            // 
+            this.lblTelefone.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblTelefone.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.lblTelefone.Location = new System.Drawing.Point(36, 210);
+            this.lblTelefone.Name = "lblTelefone";
+            this.lblTelefone.Size = new System.Drawing.Size(225, 37);
+            this.lblTelefone.TabIndex = 18;
+            this.lblTelefone.Text = "Telefones";
+            // 
+            // nudNumero
+            // 
+            this.nudNumero.Location = new System.Drawing.Point(493, 426);
+            this.nudNumero.Name = "nudNumero";
+            this.nudNumero.Size = new System.Drawing.Size(108, 23);
+            this.nudNumero.TabIndex = 19;
+            // 
+            // lbTelefones
+            // 
+            this.lbTelefones.FormattingEnabled = true;
+            this.lbTelefones.ItemHeight = 15;
+            this.lbTelefones.Location = new System.Drawing.Point(369, 167);
+            this.lbTelefones.Name = "lbTelefones";
+            this.lbTelefones.Size = new System.Drawing.Size(232, 79);
+            this.lbTelefones.TabIndex = 20;
+            // 
+            // txtTelefone
+            // 
+            this.txtTelefone.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtTelefone.Location = new System.Drawing.Point(157, 219);
+            this.txtTelefone.Mask = "00 000000000";
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(196, 23);
+            this.txtTelefone.TabIndex = 21;
+            // 
+            // btnAddTelefone
+            // 
+            this.btnAddTelefone.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnAddTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAddTelefone.ForeColor = System.Drawing.Color.GhostWhite;
+            this.btnAddTelefone.Location = new System.Drawing.Point(157, 249);
+            this.btnAddTelefone.Name = "btnAddTelefone";
+            this.btnAddTelefone.Size = new System.Drawing.Size(104, 29);
+            this.btnAddTelefone.TabIndex = 22;
+            this.btnAddTelefone.Text = "Adicionar";
+            this.btnAddTelefone.UseVisualStyleBackColor = false;
+            // 
+            // btnGravar
+            // 
+            this.btnGravar.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnGravar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnGravar.ForeColor = System.Drawing.Color.GhostWhite;
+            this.btnGravar.Location = new System.Drawing.Point(38, 505);
+            this.btnGravar.Name = "btnGravar";
+            this.btnGravar.Size = new System.Drawing.Size(118, 41);
+            this.btnGravar.TabIndex = 23;
+            this.btnGravar.Text = "Gravar";
+            this.btnGravar.UseVisualStyleBackColor = false;
+            // 
+            // btnVoltar
+            // 
+            this.btnVoltar.BackColor = System.Drawing.Color.GhostWhite;
+            this.btnVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnVoltar.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnVoltar.Location = new System.Drawing.Point(182, 505);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(118, 41);
+            this.btnVoltar.TabIndex = 24;
+            this.btnVoltar.Text = "Voltar";
+            this.btnVoltar.UseVisualStyleBackColor = false;
+            // 
             // CadastroCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 507);
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ClientSize = new System.Drawing.Size(800, 558);
+            this.Controls.Add(this.btnVoltar);
+            this.Controls.Add(this.btnGravar);
+            this.Controls.Add(this.btnAddTelefone);
+            this.Controls.Add(this.txtTelefone);
+            this.Controls.Add(this.lbTelefones);
+            this.Controls.Add(this.nudNumero);
+            this.Controls.Add(this.lblTelefone);
             this.Controls.Add(this.dtpDataNascimento);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtCep);
+            this.Controls.Add(this.txtRua);
+            this.Controls.Add(this.txtBairro);
+            this.Controls.Add(this.txtCidade);
+            this.Controls.Add(this.txtNome);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.lblNumero);
             this.Controls.Add(this.lblCep);
             this.Controls.Add(this.lblRua);
@@ -253,6 +330,7 @@ namespace Confeitaria
             this.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.Name = "CadastroCliente";
             this.Text = "Cadastro de Cliente";
+            ((System.ComponentModel.ISupportInitialize)(this.nudNumero)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -270,13 +348,19 @@ namespace Confeitaria
         private System.Windows.Forms.Label lblRua;
         private System.Windows.Forms.Label lblCep;
         private System.Windows.Forms.Label lblNumero;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.TextBox txtCidade;
+        private System.Windows.Forms.TextBox txtBairro;
+        private System.Windows.Forms.TextBox txtRua;
+        private System.Windows.Forms.TextBox txtCep;
         private System.Windows.Forms.DateTimePicker dtpDataNascimento;
+        private System.Windows.Forms.Label lblTelefone;
+        private System.Windows.Forms.NumericUpDown nudNumero;
+        private System.Windows.Forms.ListBox lbTelefones;
+        private System.Windows.Forms.MaskedTextBox txtTelefone;
+        private System.Windows.Forms.Button btnAddTelefone;
+        private System.Windows.Forms.Button btnGravar;
+        private System.Windows.Forms.Button btnVoltar;
     }
 }
