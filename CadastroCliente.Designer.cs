@@ -88,7 +88,6 @@ namespace Confeitaria
             this.lblDataNascimento.Size = new System.Drawing.Size(225, 37);
             this.lblDataNascimento.TabIndex = 2;
             this.lblDataNascimento.Text = "Data de Nascimento";
-            this.lblDataNascimento.Click += new System.EventHandler(this.lblDataNascimento_Click);
             // 
             // lblDadosPessoais
             // 
@@ -144,7 +143,6 @@ namespace Confeitaria
             this.lblRua.Size = new System.Drawing.Size(49, 30);
             this.lblRua.TabIndex = 7;
             this.lblRua.Text = "Rua";
-            this.lblRua.Click += new System.EventHandler(this.label3_Click);
             // 
             // lblCep
             // 

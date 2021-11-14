@@ -21,5 +21,11 @@ namespace Confeitaria
         {
 
         }
+
+        private void cadastrarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CadastroCliente cadastroCliente = new();
+            cadastroCliente.ShowDialog();
+        }
     }
 }

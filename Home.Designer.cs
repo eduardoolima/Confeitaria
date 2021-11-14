@@ -68,6 +68,7 @@ namespace Confeitaria
             this.excluirToolStripMenuItem,
             this.verTodosToolStripMenuItem});
             this.clienteToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.clienteToolStripMenuItem.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
             this.clienteToolStripMenuItem.Size = new System.Drawing.Size(70, 25);
             this.clienteToolStripMenuItem.Text = "Cliente";
@@ -75,26 +76,31 @@ namespace Confeitaria
             // 
             // cadastrarToolStripMenuItem
             // 
+            this.cadastrarToolStripMenuItem.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.cadastrarToolStripMenuItem.Name = "cadastrarToolStripMenuItem";
-            this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.cadastrarToolStripMenuItem.Text = "Cadastrar";
+            this.cadastrarToolStripMenuItem.Click += new System.EventHandler(this.cadastrarToolStripMenuItem_Click);
             // 
             // editarToolStripMenuItem
             // 
+            this.editarToolStripMenuItem.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
-            this.editarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editarToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.editarToolStripMenuItem.Text = "Editar";
             // 
             // excluirToolStripMenuItem
             // 
+            this.excluirToolStripMenuItem.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.excluirToolStripMenuItem.Name = "excluirToolStripMenuItem";
-            this.excluirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.excluirToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.excluirToolStripMenuItem.Text = "Excluir";
             // 
             // verTodosToolStripMenuItem
             // 
+            this.verTodosToolStripMenuItem.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.verTodosToolStripMenuItem.Name = "verTodosToolStripMenuItem";
-            this.verTodosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.verTodosToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.verTodosToolStripMenuItem.Text = "Ver Todos";
             // 
             // produtosToolStripMenuItem
@@ -105,37 +111,43 @@ namespace Confeitaria
             this.excluirToolStripMenuItem1,
             this.verTodosToolStripMenuItem1});
             this.produtosToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.produtosToolStripMenuItem.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.produtosToolStripMenuItem.Name = "produtosToolStripMenuItem";
             this.produtosToolStripMenuItem.Size = new System.Drawing.Size(85, 25);
             this.produtosToolStripMenuItem.Text = "Produtos";
             // 
             // cadastrarToolStripMenuItem1
             // 
+            this.cadastrarToolStripMenuItem1.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.cadastrarToolStripMenuItem1.Name = "cadastrarToolStripMenuItem1";
-            this.cadastrarToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.cadastrarToolStripMenuItem1.Size = new System.Drawing.Size(180, 26);
             this.cadastrarToolStripMenuItem1.Text = "Cadastrar";
             // 
             // editarToolStripMenuItem1
             // 
+            this.editarToolStripMenuItem1.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.editarToolStripMenuItem1.Name = "editarToolStripMenuItem1";
-            this.editarToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.editarToolStripMenuItem1.Size = new System.Drawing.Size(180, 26);
             this.editarToolStripMenuItem1.Text = "Editar";
             // 
             // excluirToolStripMenuItem1
             // 
+            this.excluirToolStripMenuItem1.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.excluirToolStripMenuItem1.Name = "excluirToolStripMenuItem1";
-            this.excluirToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.excluirToolStripMenuItem1.Size = new System.Drawing.Size(180, 26);
             this.excluirToolStripMenuItem1.Text = "Excluir";
             // 
             // verTodosToolStripMenuItem1
             // 
+            this.verTodosToolStripMenuItem1.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.verTodosToolStripMenuItem1.Name = "verTodosToolStripMenuItem1";
-            this.verTodosToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.verTodosToolStripMenuItem1.Size = new System.Drawing.Size(180, 26);
             this.verTodosToolStripMenuItem1.Text = "Ver Todos";
             // 
             // relatórioToolStripMenuItem
             // 
             this.relatórioToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.relatórioToolStripMenuItem.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.relatórioToolStripMenuItem.Name = "relatórioToolStripMenuItem";
             this.relatórioToolStripMenuItem.Size = new System.Drawing.Size(85, 25);
             this.relatórioToolStripMenuItem.Text = "Relatório";
