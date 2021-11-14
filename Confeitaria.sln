@@ -5,10 +5,6 @@ VisualStudioVersion = 16.0.31727.386
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Confeitaria", "Confeitaria.csproj", "{6C387220-A4F9-4F71-9BE8-DF5A0FA384EF}"
 EndProject
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "DataBaseProject", "..\DataBaseProject\DataBaseProject.sqlproj", "{923FDDD2-838C-4353-BE1E-A509C0489762}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{994F9F3C-72B4-405D-A75E-F0F2A8ABDEA2}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,18 +15,9 @@ Global
 		{6C387220-A4F9-4F71-9BE8-DF5A0FA384EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C387220-A4F9-4F71-9BE8-DF5A0FA384EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C387220-A4F9-4F71-9BE8-DF5A0FA384EF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{923FDDD2-838C-4353-BE1E-A509C0489762}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{923FDDD2-838C-4353-BE1E-A509C0489762}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{923FDDD2-838C-4353-BE1E-A509C0489762}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{923FDDD2-838C-4353-BE1E-A509C0489762}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{923FDDD2-838C-4353-BE1E-A509C0489762}.Release|Any CPU.Build.0 = Release|Any CPU
-		{923FDDD2-838C-4353-BE1E-A509C0489762}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{923FDDD2-838C-4353-BE1E-A509C0489762} = {994F9F3C-72B4-405D-A75E-F0F2A8ABDEA2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CE21D0F0-E6F0-451D-B0C7-A2CC2F5A2E9C}
