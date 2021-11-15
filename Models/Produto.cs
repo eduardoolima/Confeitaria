@@ -51,11 +51,6 @@ namespace Confeitaria.Models
             string[] aux = database.Campos.Split(';');
             idProduto = int.Parse(aux[0]);
             return idProduto;
-            //if (database.dr.Read())
-            //{
-            //   idProduto = Convert.ToInt32(database.dr["idProduto"]);
-            //}
-            //return idProduto;
         }
         public void ListById(int id)
         {
@@ -69,18 +64,6 @@ namespace Confeitaria.Models
             l.qtdProd = int.Parse(aux[5]);
             l.dataFabricacao = DateTime.Parse(aux[6]);
             l.dataValidade = DateTime.Parse(aux[7]);
-
-
-            //if (database.dr.Read())
-            //{
-            //    nomeProduto = database.dr["nomeProd"].ToString();
-            //    precoProduto = database.dr["precoProd"].ToString();
-            //    descricao = database.dr["descricao"].ToString();
-            //    l.dataFabricacao = Convert.ToDateTime(database.dr["dataFabricacao"]);
-            //    l.dataValidade = Convert.ToDateTime(database.dr["dataValidade"]);
-            //    l.qtdProd = Convert.ToInt32(database.dr["qtdProd"]);
-            //}
-            //database.Disconnect();
         }
 
         public DataSet ListarDados()

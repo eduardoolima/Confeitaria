@@ -38,7 +38,6 @@ namespace Confeitaria
         private void cmbProdutos_SelectedIndexChanged(object sender, EventArgs e)
         {
             p.idProduto = Convert.ToInt32(cmbProdutos.SelectedValue);
-            //l.idItemLote = Convert.ToInt32(cmbProdutos.SelectedValue);
             p.ListById(p.idProduto);
             txtNome.Text = p.nomeProduto;
             txtPreco.Text = p.precoProduto;
@@ -48,26 +47,6 @@ namespace Confeitaria
             txtQtd.Text = l.qtdProd.ToString();
             dtpDataFab.Value = l.dataFabricacao;
             dtpDataVenc.Value = l.dataValidade;
-
-            //SqlConnection cn = new();
-            //string s = @"SERVER=DESKTOP-81CRV27\SQLEXPRESS;Database=Confeitaria;UID=sa;PWD=123";
-            //cn.ConnectionString = s;
-            //cn.Open();
-            //SqlCommand cd = new();
-            //cd.CommandText = $"select * from Lote l join Produto p on l.idProduto = p.idProduto where p.idProduto = {cmbProdutos.SelectedValue.ToString()}";
-            //cd.Connection = cn;
-            //SqlDataReader dr = cd.ExecuteReader();
-            //if (dr.Read())
-            //{
-            //    txtQtd.Text = dr["qtdProd"].ToString();
-            //    dtpDataFab.Value = Convert.ToDateTime(dr["dataFabricacao"]);
-            //    dtpDataVenc.Value = Convert.ToDateTime(dr["dataValidade"]);
-            //}
-            //cn.Close();
-
-            
-
-
         }
         private void btnVoltar_Click(object sender, EventArgs e)
         {
@@ -108,6 +87,34 @@ namespace Confeitaria
             }
         }
 
-        
+        private void cmdExcluir_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                p.idProduto = Convert.ToInt32(cmbProdutos.SelectedValue);
+                l.idProduto = Convert.ToInt32(cmbProdutos.SelectedValue);
+                l.Delete();
+                p.Delete();
+
+                MessageBox.Show("Registro Excluir com sucesso!");
+                txtNome.Clear();
+                txtPreco.Clear();
+                txtDesc.Clear();
+                txtQtd.Clear();
+                dtpDataFab.Value = DateTime.Now;
+                dtpDataVenc.Value = DateTime.Now;
+
+                CarregaCombo();
+            }
+            catch (Exception ex)
+            {
+                using (StreamWriter sw = File.AppendText(path))
+                {
+                    sw.WriteLine("Erro ao Excluir produto - " + DateTime.Now.ToString() + " - " + ex.Message.ToString());
+                    MessageBox.Show("o monte d bosta? vc ta bem?");
+                }
+
+            }
+        }
     }
 }

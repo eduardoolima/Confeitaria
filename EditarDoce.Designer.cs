@@ -47,6 +47,7 @@ namespace Confeitaria
             this.label2 = new System.Windows.Forms.Label();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.cmdEditar = new System.Windows.Forms.Button();
+            this.cmdExcluir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cmbProdutos
@@ -196,7 +197,7 @@ namespace Confeitaria
             this.btnVoltar.BackColor = System.Drawing.Color.GhostWhite;
             this.btnVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnVoltar.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.btnVoltar.Location = new System.Drawing.Point(366, 373);
+            this.btnVoltar.Location = new System.Drawing.Point(497, 373);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(118, 41);
             this.btnVoltar.TabIndex = 39;
@@ -209,7 +210,7 @@ namespace Confeitaria
             this.cmdEditar.BackColor = System.Drawing.Color.DarkSlateBlue;
             this.cmdEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.cmdEditar.ForeColor = System.Drawing.Color.GhostWhite;
-            this.cmdEditar.Location = new System.Drawing.Point(222, 373);
+            this.cmdEditar.Location = new System.Drawing.Point(37, 373);
             this.cmdEditar.Name = "cmdEditar";
             this.cmdEditar.Size = new System.Drawing.Size(118, 41);
             this.cmdEditar.TabIndex = 38;
@@ -217,11 +218,25 @@ namespace Confeitaria
             this.cmdEditar.UseVisualStyleBackColor = false;
             this.cmdEditar.Click += new System.EventHandler(this.cmdEditar_Click);
             // 
+            // cmdExcluir
+            // 
+            this.cmdExcluir.BackColor = System.Drawing.Color.DarkRed;
+            this.cmdExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.cmdExcluir.ForeColor = System.Drawing.Color.GhostWhite;
+            this.cmdExcluir.Location = new System.Drawing.Point(194, 373);
+            this.cmdExcluir.Name = "cmdExcluir";
+            this.cmdExcluir.Size = new System.Drawing.Size(118, 41);
+            this.cmdExcluir.TabIndex = 40;
+            this.cmdExcluir.Text = "Excluir";
+            this.cmdExcluir.UseVisualStyleBackColor = false;
+            this.cmdExcluir.Click += new System.EventHandler(this.cmdExcluir_Click);
+            // 
             // EditarDoce
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(666, 437);
+            this.Controls.Add(this.cmdExcluir);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.cmdEditar);
             this.Controls.Add(this.label2);
@@ -268,5 +283,6 @@ namespace Confeitaria
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Button cmdEditar;
+        private System.Windows.Forms.Button cmdExcluir;
     }
 }

@@ -58,3 +58,23 @@ Erro ao incluir produto - 15/11/2021 17:05:30 - Exception of type 'System.Except
 Erro no comando SQL (GET)- 15/11/2021 17:07:45 - Sintaxe incorreta próxima a 'nomeProd'.
 Erro no comando SQL (GET)- 15/11/2021 17:13:09 - Nome de coluna 'zddddd' inválido.
 Erro no comando SQL (GET)- 15/11/2021 17:16:55 - Sintaxe incorreta próxima a 'mãe'.
+Erro ao executar comando SQL - 15/11/2021 18:46:40 - A instrução DELETE conflitou com a restrição do REFERENCE "FK__Lote__idProduto__3D5E1FD2". O conflito ocorreu no banco de dados "Confeitaria", tabela "dbo.Lote", column 'idProduto'.
+A instrução foi finalizada.
+Erro ao Excluir produto - 15/11/2021 18:46:40 - Exception of type 'System.Exception' was thrown.
+Erro ao executar comando SQL - 15/11/2021 18:49:23 - A instrução DELETE conflitou com a restrição do REFERENCE "FK__Lote__idProduto__3D5E1FD2". O conflito ocorreu no banco de dados "Confeitaria", tabela "dbo.Lote", column 'idProduto'.
+A instrução foi finalizada.
+Erro ao Excluir produto - 15/11/2021 18:49:23 - Exception of type 'System.Exception' was thrown.
+Erro ao executar comando SQL - 15/11/2021 18:51:58 - A instrução DELETE conflitou com a restrição do REFERENCE "FK__Lote__idProduto__3D5E1FD2". O conflito ocorreu no banco de dados "Confeitaria", tabela "dbo.Lote", column 'idProduto'.
+A instrução foi finalizada.
+Erro ao Excluir produto - 15/11/2021 18:51:59 - Exception of type 'System.Exception' was thrown.
+Erro ao executar comando SQL - 15/11/2021 18:52:48 - A instrução DELETE conflitou com a restrição do REFERENCE "FK__Lote__idProduto__3D5E1FD2". O conflito ocorreu no banco de dados "Confeitaria", tabela "dbo.Lote", column 'idProduto'.
+A instrução foi finalizada.
+Erro ao Excluir produto - 15/11/2021 18:52:48 - Exception of type 'System.Exception' was thrown.
+Erro ao executar comando SQL - 15/11/2021 18:54:21 - A instrução DELETE conflitou com a restrição do REFERENCE "FK__Lote__idProduto__3D5E1FD2". O conflito ocorreu no banco de dados "Confeitaria", tabela "dbo.Lote", column 'idProduto'.
+A instrução foi finalizada.
+Erro ao Excluir produto - 15/11/2021 18:54:21 - Exception of type 'System.Exception' was thrown.
+Erro ao executar comando SQL - 15/11/2021 18:57:19 - A instrução DELETE conflitou com a restrição do REFERENCE "FK__Lote__idProduto__3D5E1FD2". O conflito ocorreu no banco de dados "Confeitaria", tabela "dbo.Lote", column 'idProduto'.
+A instrução foi finalizada.
+Erro ao Excluir produto - 15/11/2021 18:57:19 - Exception of type 'System.Exception' was thrown.
+Erro ao executar comando SQL - 15/11/2021 18:58:57 - Nome de coluna 'idLote' inválido.
+Erro ao Excluir produto - 15/11/2021 18:58:57 - Exception of type 'System.Exception' was thrown.
