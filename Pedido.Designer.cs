@@ -1,5 +1,5 @@
 ﻿
-namespace Confeitaria
+namespace Confeitaria.Models
 {
     partial class Pedido
     {

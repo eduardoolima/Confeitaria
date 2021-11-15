@@ -13,7 +13,7 @@ namespace Confeitaria.Models
         public int IdTel { get; set; }
         public string Tel { get; set; }
         public int IdCliente { get; set; }
-
+        #endregion
         public Telefone()
         {
         }
