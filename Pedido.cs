@@ -16,8 +16,5 @@ namespace Confeitaria
         {
             InitializeComponent();
         }
-        
-
-
     }
 }

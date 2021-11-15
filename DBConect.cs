@@ -7,7 +7,7 @@ namespace Confeitaria
 {
     class DBConect
     {
-        private readonly string path = @"C:\Users\Fabio\source\repos\Confeitaria\Logs\logError.txt";
+        private readonly string path = @"\Confeitaria\Logs\logError.txt";
 
         private SqlConnection cn = new();
         private SqlCommand cmd = new();
