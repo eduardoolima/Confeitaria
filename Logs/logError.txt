@@ -1,1 +1,60 @@
-﻿
+﻿Erro ao estabelecer conexão com o Banco de dados - 15/11/2021 00:36:12 - Instance failure.
+Erro ao executar comando SQL - 15/11/2021 00:36:12 - Exception of type 'System.Exception' was thrown.
+Erro ao estabelecer conexão com o Banco de dados - 15/11/2021 00:39:12 - Instance failure.
+Erro ao executar comando SQL - 15/11/2021 00:39:12 - Exception of type 'System.Exception' was thrown.
+Erro ao executar comando SQL - 15/11/2021 00:45:13 - Nome de coluna 'dataVencimento' inválido.
+Erro ao executar comando SQL - 15/11/2021 00:45:38 - Nome de coluna 'dataVencimento' inválido.
+Erro ao executar comando SQL - 15/11/2021 00:49:16 - Nome de coluna 'dataVencimento' inválido.
+Erro no comando SQL (LIST)- 15/11/2021 10:09:19 - Nome de coluna 'idProd' inválido.
+Nome de coluna 'idProd' inválido.
+Erro no comando SQL (LIST)- 15/11/2021 11:16:16 - Nome de coluna 'idProd' inválido.
+Nome de coluna 'idProd' inválido.
+Erro ao estabelecer conexão com o Banco de dados - 15/11/2021 12:00:48 - Not allowed to change the 'ConnectionString' property. The connection's current state is open.
+Erro ao executar comando SQL - 15/11/2021 12:00:48 - Exception of type 'System.Exception' was thrown.
+Erro ao editar produto - 15/11/2021 12:00:48 - Exception of type 'System.Exception' was thrown.
+Erro ao executar comando SQL - 15/11/2021 12:00:59 - Nome de coluna 'dataVencimento' inválido.
+Erro ao editar produto - 15/11/2021 12:00:59 - Exception of type 'System.Exception' was thrown.
+Erro ao executar comando SQL - 15/11/2021 12:01:01 - Nome de coluna 'dataVencimento' inválido.
+Erro ao editar produto - 15/11/2021 12:01:01 - Exception of type 'System.Exception' was thrown.
+Erro ao executar comando SQL - 15/11/2021 12:01:01 - Nome de coluna 'dataVencimento' inválido.
+Erro ao editar produto - 15/11/2021 12:01:01 - Exception of type 'System.Exception' was thrown.
+Erro ao executar comando SQL - 15/11/2021 12:01:20 - Nome de coluna 'dataVencimento' inválido.
+Erro ao editar produto - 15/11/2021 12:01:20 - Exception of type 'System.Exception' was thrown.
+Erro ao executar comando SQL - 15/11/2021 12:01:21 - Nome de coluna 'dataVencimento' inválido.
+Erro ao editar produto - 15/11/2021 12:01:21 - Exception of type 'System.Exception' was thrown.
+Erro ao executar comando SQL - 15/11/2021 12:01:22 - Nome de coluna 'dataVencimento' inválido.
+Erro ao editar produto - 15/11/2021 12:01:22 - Exception of type 'System.Exception' was thrown.
+Erro ao estabelecer conexão com o Banco de dados - 15/11/2021 12:05:01 - Not allowed to change the 'ConnectionString' property. The connection's current state is open.
+Erro ao executar comando SQL - 15/11/2021 12:05:01 - Exception of type 'System.Exception' was thrown.
+Erro ao editar produto - 15/11/2021 12:05:14 - Exception of type 'System.Exception' was thrown.
+Erro ao estabelecer conexão com o Banco de dados - 15/11/2021 12:07:23 - Not allowed to change the 'ConnectionString' property. The connection's current state is open.
+Erro ao executar comando SQL - 15/11/2021 12:07:23 - Exception of type 'System.Exception' was thrown.
+Erro ao editar produto - 15/11/2021 12:07:23 - Exception of type 'System.Exception' was thrown.
+Erro ao estabelecer conexão com o Banco de dados - 15/11/2021 12:19:42 - Not allowed to change the 'ConnectionString' property. The connection's current state is open.
+Erro ao executar comando SQL - 15/11/2021 12:19:42 - Exception of type 'System.Exception' was thrown.
+Erro ao editar produto - 15/11/2021 12:19:42 - Exception of type 'System.Exception' was thrown.
+Erro ao estabelecer conexão com o Banco de dados - 15/11/2021 12:22:59 - Not allowed to change the 'ConnectionString' property. The connection's current state is open.
+Erro ao executar comando SQL - 15/11/2021 12:22:59 - Exception of type 'System.Exception' was thrown.
+Erro ao estabelecer conexão com o Banco de dados - 15/11/2021 12:26:50 - Not allowed to change the 'ConnectionString' property. The connection's current state is open.
+Erro ao executar comando SQL - 15/11/2021 12:26:50 - Exception of type 'System.Exception' was thrown.
+Erro ao editar produto - 15/11/2021 12:26:59 - Exception of type 'System.Exception' was thrown.
+Erro ao estabelecer conexão com o Banco de dados - 15/11/2021 12:31:55 - Not allowed to change the 'ConnectionString' property. The connection's current state is open.
+Erro ao estabelecer conexão com o Banco de dados - 15/11/2021 12:34:15 - Not allowed to change the 'ConnectionString' property. The connection's current state is open.
+Erro ao estabelecer conexão com o Banco de dados - 15/11/2021 12:39:38 - Not allowed to change the 'ConnectionString' property. The connection's current state is open.
+Erro ao executar comando SQL - 15/11/2021 12:39:38 - Exception of type 'System.Exception' was thrown.
+Erro ao estabelecer conexão com o Banco de dados - 15/11/2021 12:40:54 - Not allowed to change the 'ConnectionString' property. The connection's current state is open.
+Erro ao executar comando SQL - 15/11/2021 12:43:39 - Not allowed to change the 'ConnectionString' property. The connection's current state is open.
+Erro ao estabelecer conexão com o Banco de dados - 15/11/2021 12:49:25 - Not allowed to change the 'ConnectionString' property. The connection's current state is open.
+Erro ao executar comando SQL - 15/11/2021 12:49:25 - Exception of type 'System.Exception' was thrown.
+Erro ao editar produto - 15/11/2021 12:49:25 - Exception of type 'System.Exception' was thrown.
+Erro ao estabelecer conexão com o Banco de dados - 15/11/2021 12:50:53 - Not allowed to change the 'ConnectionString' property. The connection's current state is open.
+Erro ao estabelecer conexão com o Banco de dados - 15/11/2021 15:59:40 - Not allowed to change the 'ConnectionString' property. The connection's current state is open.
+Erro no comando SQL (GET)- 15/11/2021 17:05:08 - Sintaxe incorreta próxima a 'nomeProd'.
+Erro ao incluir produto - 15/11/2021 17:05:08 - Exception of type 'System.Exception' was thrown.
+Erro no comando SQL (GET)- 15/11/2021 17:05:12 - Sintaxe incorreta próxima a 'nomeProd'.
+Erro ao incluir produto - 15/11/2021 17:05:12 - Exception of type 'System.Exception' was thrown.
+Erro no comando SQL (GET)- 15/11/2021 17:05:30 - Sintaxe incorreta próxima a 'nomeProd'.
+Erro ao incluir produto - 15/11/2021 17:05:30 - Exception of type 'System.Exception' was thrown.
+Erro no comando SQL (GET)- 15/11/2021 17:07:45 - Sintaxe incorreta próxima a 'nomeProd'.
+Erro no comando SQL (GET)- 15/11/2021 17:13:09 - Nome de coluna 'zddddd' inválido.
+Erro no comando SQL (GET)- 15/11/2021 17:16:55 - Sintaxe incorreta próxima a 'mãe'.

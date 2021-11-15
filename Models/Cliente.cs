@@ -48,16 +48,16 @@ namespace Confeitaria.Models
             //dataBase.Execute(cmd);
         }
 
-        public void GetByName(string name)
-        {
-            string sql = "select * from Cliente where Nome = '" + Nome + "'";
-            dataBase.Get(sql);
-            string[] aux = dataBase.Campos.Split(';');
-            Nome = aux[0];
-            Telefone = aux[1];
-            Endereço = aux[2];
-            Cidade = aux[3];
-        }
+        //public void GetByName(string name)
+        //{
+        //    string sql = "select * from Cliente where Nome = '" + Nome + "'";
+        //    dataBase.Get(sql);
+        //    string[] aux = dataBase.Campos.Split(';');
+        //    Nome = aux[0];
+        //    Telefone = aux[1];
+        //    Endereco = aux[2];
+        //    Cidade = aux[3];
+        //}
 
 
     }
