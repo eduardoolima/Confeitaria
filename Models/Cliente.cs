@@ -53,8 +53,8 @@ namespace Confeitaria.Models
         //    string sql = "select * from Cliente where Nome = '" + Nome + "'";
         //    dataBase.Get(sql);
         //    string[] aux = dataBase.Campos.Split(';');
-        //    Nome = aux[0];
-        //    Telefone = aux[1];
+        //    IdCliente = int.Parse(aux[0]);
+        //    Nome = aux[1];
         //    Endereco = aux[2];
         //    Cidade = aux[3];
         //}

@@ -41,8 +41,12 @@ namespace Confeitaria
             this.editarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.excluirToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.verTodosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.venderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.relatórioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.vendasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.venderToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.editarVendaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -53,7 +57,8 @@ namespace Confeitaria
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.clienteToolStripMenuItem,
             this.produtosToolStripMenuItem,
-            this.relatórioToolStripMenuItem});
+            this.relatórioToolStripMenuItem,
+            this.vendasToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(736, 29);
@@ -109,7 +114,8 @@ namespace Confeitaria
             this.cadastrarToolStripMenuItem1,
             this.editarToolStripMenuItem1,
             this.excluirToolStripMenuItem1,
-            this.verTodosToolStripMenuItem1});
+            this.verTodosToolStripMenuItem1,
+            this.venderToolStripMenuItem});
             this.produtosToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.produtosToolStripMenuItem.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.produtosToolStripMenuItem.Name = "produtosToolStripMenuItem";
@@ -146,6 +152,14 @@ namespace Confeitaria
             this.verTodosToolStripMenuItem1.Size = new System.Drawing.Size(180, 26);
             this.verTodosToolStripMenuItem1.Text = "Ver Todos";
             // 
+            // venderToolStripMenuItem
+            // 
+            this.venderToolStripMenuItem.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.venderToolStripMenuItem.Name = "venderToolStripMenuItem";
+            this.venderToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.venderToolStripMenuItem.Text = "Vender";
+            this.venderToolStripMenuItem.Click += new System.EventHandler(this.venderToolStripMenuItem_Click);
+            // 
             // relatórioToolStripMenuItem
             // 
             this.relatórioToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -165,6 +179,35 @@ namespace Confeitaria
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            // 
+            // vendasToolStripMenuItem
+            // 
+            this.vendasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.venderToolStripMenuItem1,
+            this.editarVendaToolStripMenuItem});
+            this.vendasToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.vendasToolStripMenuItem.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.vendasToolStripMenuItem.Name = "vendasToolStripMenuItem";
+            this.vendasToolStripMenuItem.Size = new System.Drawing.Size(72, 25);
+            this.vendasToolStripMenuItem.Text = "Vendas";
+            // 
+            // venderToolStripMenuItem1
+            // 
+            this.venderToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.venderToolStripMenuItem1.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.venderToolStripMenuItem1.Name = "venderToolStripMenuItem1";
+            this.venderToolStripMenuItem1.Size = new System.Drawing.Size(180, 26);
+            this.venderToolStripMenuItem1.Text = "Vender";
+            this.venderToolStripMenuItem1.Click += new System.EventHandler(this.venderToolStripMenuItem1_Click);
+            // 
+            // editarVendaToolStripMenuItem
+            // 
+            this.editarVendaToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.editarVendaToolStripMenuItem.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.editarVendaToolStripMenuItem.Name = "editarVendaToolStripMenuItem";
+            this.editarVendaToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.editarVendaToolStripMenuItem.Text = "Editar Venda";
+            this.editarVendaToolStripMenuItem.Click += new System.EventHandler(this.editarVendaToolStripMenuItem_Click);
             // 
             // Home
             // 
@@ -201,6 +244,10 @@ namespace Confeitaria
         private System.Windows.Forms.ToolStripMenuItem verTodosToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem relatórioToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripMenuItem venderToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem vendasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem venderToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem editarVendaToolStripMenuItem;
     }
 }
 

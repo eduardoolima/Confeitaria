@@ -28,16 +28,22 @@ namespace Confeitaria
             cadastroCliente.ShowDialog();
         }
 
-        private void cadastrarToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void venderToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CadastroDoces cd = new();
-            cd.ShowDialog();
+            CadastroCliente cadastroCliente = new();
+            cadastroCliente.ShowDialog();
         }
 
-        private void editarToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void venderToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            EditarDoce ed = new();
-            ed.ShowDialog();
+            Pedido vender = new();
+            vender.ShowDialog();
+        }
+
+        private void editarVendaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditarPedido editarPedido = new();
+            editarPedido.ShowDialog();
         }
     }
 }

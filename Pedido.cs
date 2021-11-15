@@ -16,5 +16,20 @@ namespace Confeitaria
         {
             InitializeComponent();
         }
+        private DBConect dataBase = new DBConect();
+        private void Pedido_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void cmbProduto_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
