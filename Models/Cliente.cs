@@ -50,13 +50,13 @@ namespace Confeitaria.Models
 
         public void GetByName(string name)
         {
-            string sql = "select * from Cliente where Nome = '" + Nome + "'";
-            dataBase.Get(sql);
-            string[] aux = dataBase.Campos.Split(';');
-            IdCliente = int.Parse(aux[0]);
-            Nome = aux[1];
-            Endereço = aux[2];
-            Cidade = aux[3];
+            //string sql = "select * from Cliente where Nome = '" + Nome + "'";
+            //dataBase.Get(sql);
+            //string[] aux = dataBase.Campos.Split(';');
+            //IdCliente = int.Parse(aux[0]);
+            //Nome = aux[1];
+            //Endereço = aux[2];
+            //Cidade = aux[3];
         }
 
 

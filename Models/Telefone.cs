@@ -32,13 +32,13 @@ namespace Confeitaria.Models
 
         public void GetByClientName(string name)
         {
-            string sql = "select * from Cliente c join Telefone t on t.idCliente = c.idCliente Nomewhere t.idCliente = '" + Nome + "'";
-            dataBase.Get(sql);
-            string[] aux = dataBase.Campos.Split(';');
-            Nome = aux[0];
-            Telefone = aux[1];
-            Endereço = aux[2];
-            Cidade = aux[3];
+            //string sql = "select * from Cliente c join Telefone t on t.idCliente = c.idCliente Nomewhere t.idCliente = '" + Nome + "'";
+            //dataBase.Get(sql);
+            //string[] aux = dataBase.Campos.Split(';');
+            ////Nome = aux[0];
+            ////Telefone = aux[1];
+            ////Endereço = aux[2];
+            ////Cidade = aux[3];
         }
     }
 }
