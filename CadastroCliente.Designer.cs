@@ -261,9 +261,10 @@ namespace Confeitaria
             // btnAddTelefone
             // 
             this.btnAddTelefone.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnAddTelefone.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnAddTelefone.ForeColor = System.Drawing.Color.GhostWhite;
-            this.btnAddTelefone.Location = new System.Drawing.Point(157, 249);
+            this.btnAddTelefone.Location = new System.Drawing.Point(157, 248);
             this.btnAddTelefone.Name = "btnAddTelefone";
             this.btnAddTelefone.Size = new System.Drawing.Size(104, 29);
             this.btnAddTelefone.TabIndex = 22;
@@ -273,6 +274,7 @@ namespace Confeitaria
             // btnGravar
             // 
             this.btnGravar.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnGravar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGravar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnGravar.ForeColor = System.Drawing.Color.GhostWhite;
             this.btnGravar.Location = new System.Drawing.Point(38, 505);
@@ -285,6 +287,7 @@ namespace Confeitaria
             // btnVoltar
             // 
             this.btnVoltar.BackColor = System.Drawing.Color.GhostWhite;
+            this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnVoltar.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.btnVoltar.Location = new System.Drawing.Point(182, 505);
