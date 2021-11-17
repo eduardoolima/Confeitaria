@@ -27,5 +27,12 @@ namespace Confeitaria
             CadastroCliente cadastroCliente = new();
             cadastroCliente.ShowDialog();
         }
+
+        private void editarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditCliente editCliente = new();
+            editCliente.ShowDialog();
+                
+        }
     }
 }

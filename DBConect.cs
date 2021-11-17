@@ -80,6 +80,7 @@ namespace Confeitaria
         {
             try
             {
+                Campos = "";
                 Conect();
                 cmd.Connection = cn;
                 cmd.CommandText = sql;
