@@ -38,12 +38,11 @@ namespace Confeitaria
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.Carrinho = new System.Windows.Forms.ListBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -173,6 +172,14 @@ namespace Confeitaria
             this.groupBox2.TabIndex = 10;
             this.groupBox2.TabStop = false;
             // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox1.Location = new System.Drawing.Point(123, 251);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(79, 29);
+            this.textBox1.TabIndex = 13;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -184,14 +191,6 @@ namespace Confeitaria
             this.label5.Size = new System.Drawing.Size(120, 30);
             this.label5.TabIndex = 12;
             this.label5.Text = "Preço Total:";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(123, 251);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(79, 29);
-            this.textBox1.TabIndex = 13;
             // 
             // Pedido
             // 
@@ -228,7 +227,6 @@ namespace Confeitaria
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ListBox Carrinho;
         private System.Windows.Forms.Button button2;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.GroupBox groupBox2;
