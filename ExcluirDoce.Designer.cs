@@ -45,6 +45,8 @@ namespace Confeitaria
             this.lblNome = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cmbProdutos = new System.Windows.Forms.ComboBox();
+            this.btnVoltar = new System.Windows.Forms.Button();
+            this.cmdExcluir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label2
@@ -194,11 +196,37 @@ namespace Confeitaria
             this.cmbProdutos.Size = new System.Drawing.Size(448, 23);
             this.cmbProdutos.TabIndex = 39;
             // 
+            // btnVoltar
+            // 
+            this.btnVoltar.BackColor = System.Drawing.Color.GhostWhite;
+            this.btnVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnVoltar.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnVoltar.Location = new System.Drawing.Point(346, 370);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(118, 41);
+            this.btnVoltar.TabIndex = 54;
+            this.btnVoltar.Text = "Voltar";
+            this.btnVoltar.UseVisualStyleBackColor = false;
+            // 
+            // cmdExcluir
+            // 
+            this.cmdExcluir.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.cmdExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.cmdExcluir.ForeColor = System.Drawing.Color.GhostWhite;
+            this.cmdExcluir.Location = new System.Drawing.Point(202, 370);
+            this.cmdExcluir.Name = "cmdExcluir";
+            this.cmdExcluir.Size = new System.Drawing.Size(118, 41);
+            this.cmdExcluir.TabIndex = 53;
+            this.cmdExcluir.Text = "Excluir";
+            this.cmdExcluir.UseVisualStyleBackColor = false;
+            // 
             // ExcluirDoce
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(667, 397);
+            this.ClientSize = new System.Drawing.Size(667, 427);
+            this.Controls.Add(this.btnVoltar);
+            this.Controls.Add(this.cmdExcluir);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.textBox4);
@@ -215,6 +243,7 @@ namespace Confeitaria
             this.Controls.Add(this.cmbProdutos);
             this.Controls.Add(this.label2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "ExcluirDoce";
             this.Text = "ExcluirDoce";
             this.ResumeLayout(false);
@@ -238,5 +267,7 @@ namespace Confeitaria
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmbProdutos;
+        private System.Windows.Forms.Button btnVoltar;
+        private System.Windows.Forms.Button cmdExcluir;
     }
 }
