@@ -63,26 +63,6 @@ namespace Confeitaria
             }
         }
 
-        //public void Execute(SqlCommand cmd)//Executar procedures
-        //{
-        //    try
-        //    {
-        //        Conect();
-        //        cmd.Connection = cn;
-        //        cmd.ExecuteNonQuery();
-        //        cn.Close();
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        using (StreamWriter sw = File.AppendText(path))
-        //        {
-        //            sw.WriteLine("Erro ao executar comando SQL - " + DateTime.Now.ToString() + " - " + ex.Message.ToString());
-        //        }
-        //        cn.Close();
-        //        throw new Exception();
-
-        //    }
-        //}
 
         public void Get(string sql) //exibir apenas um resultado de consulta
         {

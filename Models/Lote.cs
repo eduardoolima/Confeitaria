@@ -33,7 +33,7 @@ namespace Confeitaria.Models
         }
         public void Delete()
         {
-            string sql = $"delete from Lote where idLote = {idItemLote}";
+            string sql = $"delete from Lote where idProduto = {idProduto.ToString()}";
             database.Execute(sql);
         }
         public void ListarDadosLote()
@@ -44,14 +44,6 @@ namespace Confeitaria.Models
             qtdProd = int.Parse(aux[1]);
             dataFabricacao = DateTime.Parse(aux[2]);
             dataValidade = DateTime.Parse(aux[3]);
-
-            //if (database.dr.Read())
-            //{
-            //    qtdProd = Convert.ToInt32(database.dr["qtdProd"]);
-            //    dataFabricacao = Convert.ToDateTime(database.dr["dataFabricacao"]);
-            //    dataValidade = Convert.ToDateTime(database.dr["dataValidade"]);
-            //}
-            //database.Disconnect();
         }
     }
 }
