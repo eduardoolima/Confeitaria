@@ -16,7 +16,7 @@ namespace Confeitaria
         {
             InitializeComponent();
         }
-
+        
         private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -36,8 +36,8 @@ namespace Confeitaria
 
         private void venderToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            Pedido vender = new();
-            vender.ShowDialog();
+            //Pedido vender = new();
+            //vender.ShowDialog();
         }
 
         private void editarVendaToolStripMenuItem_Click(object sender, EventArgs e)
