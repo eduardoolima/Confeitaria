@@ -39,5 +39,11 @@ namespace Confeitaria
             EditarDoce ed = new();
             ed.ShowDialog();
         }
+
+        private void PesquisarStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PesquisarDoce pd = new PesquisarDoce();
+            pd.ShowDialog();
+        }
     }
 }

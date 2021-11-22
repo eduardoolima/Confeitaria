@@ -235,6 +235,7 @@ namespace Confeitaria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(666, 437);
             this.Controls.Add(this.cmdExcluir);
             this.Controls.Add(this.btnVoltar);
