@@ -7,30 +7,38 @@ namespace Confeitaria
 {
     class DBConect
     {
-        private readonly string path = @"\Confeitaria\Logs\logError.txt";
+        private readonly string path = @"C:\Users\Fabio\source\repos\Confeitaria\Logs\logError.txt";
 
         private SqlConnection cn = new();
         private SqlCommand cmd = new();
+        public SqlDataReader dr;
+        public DataSet ds;
+        SqlDataAdapter da;
 
         public string Campos { get; set; }
 
-        private void Conect()
-        {
+        public void Conect()
+       {
             try
             {
                 string s = "";
-                s = @"Server=DESKTOP-0QK0S7Q\SQLEXPRESS;Database=Confeitaria;UID=sa;PWD=12345678;";
+                s = @"SERVER=DESKTOP-99SVNVC\SQLEXPRESS;Database=Confeitaria;UID=sa;PWD=123";
                 cn.ConnectionString = s;
                 cn.Open();
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 using (StreamWriter sw = File.AppendText(path))
                 {
                     sw.WriteLine("Erro ao estabelecer conexão com o Banco de dados - " + DateTime.Now.ToString() + " - " + ex.Message.ToString());
-                }                    
+                }
                 throw new Exception();
             }
+        }
+
+        public void Disconnect()
+        {
+            cn.Close();
         }
 
         public void Execute(string sql)//Executar SQL
@@ -55,37 +63,17 @@ namespace Confeitaria
             }
         }
 
-        //public void Execute(SqlCommand cmd)//Executar procedures
-        //{
-        //    try
-        //    {
-        //        Conect();
-        //        cmd.Connection = cn;
-        //        cmd.ExecuteNonQuery();
-        //        cn.Close();
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        using (StreamWriter sw = File.AppendText(path))
-        //        {
-        //            sw.WriteLine("Erro ao executar comando SQL - " + DateTime.Now.ToString() + " - " + ex.Message.ToString());
-        //        }
-        //        cn.Close();
-        //        throw new Exception();
-
-        //    }
-        //}
 
         public void Get(string sql) //exibir apenas um resultado de consulta
         {
             try
             {
+                Campos = "";
                 Conect();
                 cmd.Connection = cn;
                 cmd.CommandText = sql;
 
                 SqlDataReader dr = cmd.ExecuteReader();
-                //campos = "";
                 if (dr.Read())
                 {
                     for (int i = 0; i < dr.FieldCount; i++)
@@ -110,8 +98,8 @@ namespace Confeitaria
             try
             {
                 Conect();
-                SqlDataAdapter da = new(sql, cn);
-                DataSet ds = new();
+                da = new(sql, cn);
+                ds = new();
                 da.Fill(ds);
                 cn.Close();
                 return ds;
@@ -126,5 +114,15 @@ namespace Confeitaria
                 throw new Exception();
             }
         }
+
+        public void Consultar(string sql)
+        {
+            Conect();
+            cmd.CommandText = sql;
+            cmd.Connection = cn;
+            dr = cmd.ExecuteReader();
+            Disconnect();
+        }
+        
     }
 }

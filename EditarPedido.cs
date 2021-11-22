@@ -16,5 +16,15 @@ namespace Confeitaria
         {
             InitializeComponent();
         }
+
+        private void EditarPedido_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbPedido_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

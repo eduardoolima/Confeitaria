@@ -34,14 +34,17 @@ namespace Confeitaria
             this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.excluirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.verTodosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.produtosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastrarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.editarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.excluirToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.verTodosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.relatórioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.vendasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.venderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editarPedidoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.vendasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.venderToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.editarVendaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -53,7 +56,7 @@ namespace Confeitaria
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.clienteToolStripMenuItem,
             this.produtosToolStripMenuItem,
-            this.relatórioToolStripMenuItem});
+            this.vendasToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(736, 29);
@@ -65,7 +68,6 @@ namespace Confeitaria
             this.clienteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cadastrarToolStripMenuItem,
             this.editarToolStripMenuItem,
-            this.excluirToolStripMenuItem,
             this.verTodosToolStripMenuItem});
             this.clienteToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.clienteToolStripMenuItem.ForeColor = System.Drawing.Color.DarkSlateBlue;
@@ -89,26 +91,19 @@ namespace Confeitaria
             this.editarToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.editarToolStripMenuItem.Text = "Editar";
             // 
-            // excluirToolStripMenuItem
-            // 
-            this.excluirToolStripMenuItem.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.excluirToolStripMenuItem.Name = "excluirToolStripMenuItem";
-            this.excluirToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
-            this.excluirToolStripMenuItem.Text = "Excluir";
-            // 
             // verTodosToolStripMenuItem
             // 
             this.verTodosToolStripMenuItem.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.verTodosToolStripMenuItem.Name = "verTodosToolStripMenuItem";
             this.verTodosToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
-            this.verTodosToolStripMenuItem.Text = "Ver Todos";
+            this.verTodosToolStripMenuItem.Text = "Relatório";
+            this.verTodosToolStripMenuItem.Click += new System.EventHandler(this.verTodosToolStripMenuItem_Click);
             // 
             // produtosToolStripMenuItem
             // 
             this.produtosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cadastrarToolStripMenuItem1,
             this.editarToolStripMenuItem1,
-            this.excluirToolStripMenuItem1,
             this.verTodosToolStripMenuItem1});
             this.produtosToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.produtosToolStripMenuItem.ForeColor = System.Drawing.Color.DarkSlateBlue;
@@ -120,44 +115,86 @@ namespace Confeitaria
             // 
             this.cadastrarToolStripMenuItem1.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.cadastrarToolStripMenuItem1.Name = "cadastrarToolStripMenuItem1";
-            this.cadastrarToolStripMenuItem1.Size = new System.Drawing.Size(180, 26);
+            this.cadastrarToolStripMenuItem1.Size = new System.Drawing.Size(193, 26);
             this.cadastrarToolStripMenuItem1.Text = "Cadastrar";
+            this.cadastrarToolStripMenuItem1.Click += new System.EventHandler(this.cadastrarToolStripMenuItem1_Click);
             // 
             // editarToolStripMenuItem1
             // 
             this.editarToolStripMenuItem1.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.editarToolStripMenuItem1.Name = "editarToolStripMenuItem1";
-            this.editarToolStripMenuItem1.Size = new System.Drawing.Size(180, 26);
+            this.editarToolStripMenuItem1.Size = new System.Drawing.Size(193, 26);
             this.editarToolStripMenuItem1.Text = "Editar";
-            // 
-            // excluirToolStripMenuItem1
-            // 
-            this.excluirToolStripMenuItem1.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.excluirToolStripMenuItem1.Name = "excluirToolStripMenuItem1";
-            this.excluirToolStripMenuItem1.Size = new System.Drawing.Size(180, 26);
-            this.excluirToolStripMenuItem1.Text = "Excluir";
+            this.editarToolStripMenuItem1.Click += new System.EventHandler(this.editarToolStripMenuItem1_Click);
             // 
             // verTodosToolStripMenuItem1
             // 
             this.verTodosToolStripMenuItem1.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.verTodosToolStripMenuItem1.Name = "verTodosToolStripMenuItem1";
-            this.verTodosToolStripMenuItem1.Size = new System.Drawing.Size(180, 26);
-            this.verTodosToolStripMenuItem1.Text = "Ver Todos";
+            this.verTodosToolStripMenuItem1.Size = new System.Drawing.Size(193, 26);
+            this.verTodosToolStripMenuItem1.Text = "Pesquisar Nome";
+            this.verTodosToolStripMenuItem1.Click += new System.EventHandler(this.verTodosToolStripMenuItem1_Click);
             // 
-            // relatórioToolStripMenuItem
+            // vendasToolStripMenuItem1
             // 
-            this.relatórioToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.relatórioToolStripMenuItem.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.relatórioToolStripMenuItem.Name = "relatórioToolStripMenuItem";
-            this.relatórioToolStripMenuItem.Size = new System.Drawing.Size(85, 25);
-            this.relatórioToolStripMenuItem.Text = "Relatório";
+            this.vendasToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.venderToolStripMenuItem,
+            this.editarPedidoToolStripMenuItem});
+            this.vendasToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.vendasToolStripMenuItem1.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.vendasToolStripMenuItem1.Name = "vendasToolStripMenuItem1";
+            this.vendasToolStripMenuItem1.Size = new System.Drawing.Size(69, 25);
+            this.vendasToolStripMenuItem1.Text = "Pedido";
+            // 
+            // venderToolStripMenuItem
+            // 
+            this.venderToolStripMenuItem.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.venderToolStripMenuItem.Name = "venderToolStripMenuItem";
+            this.venderToolStripMenuItem.Size = new System.Drawing.Size(186, 26);
+            this.venderToolStripMenuItem.Text = "Realizar Pedido";
+            this.venderToolStripMenuItem.Click += new System.EventHandler(this.venderToolStripMenuItem_Click_1);
+            // 
+            // editarPedidoToolStripMenuItem
+            // 
+            this.editarPedidoToolStripMenuItem.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.editarPedidoToolStripMenuItem.Name = "editarPedidoToolStripMenuItem";
+            this.editarPedidoToolStripMenuItem.Size = new System.Drawing.Size(186, 26);
+            this.editarPedidoToolStripMenuItem.Text = "Editar Pedido";
+            // 
+            // vendasToolStripMenuItem
+            // 
+            this.vendasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.venderToolStripMenuItem1,
+            this.editarVendaToolStripMenuItem});
+            this.vendasToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.vendasToolStripMenuItem.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.vendasToolStripMenuItem.Name = "vendasToolStripMenuItem";
+            this.vendasToolStripMenuItem.Size = new System.Drawing.Size(72, 25);
+            this.vendasToolStripMenuItem.Text = "Vendas";
+            // 
+            // venderToolStripMenuItem1
+            // 
+            this.venderToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.venderToolStripMenuItem1.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.venderToolStripMenuItem1.Name = "venderToolStripMenuItem1";
+            this.venderToolStripMenuItem1.Size = new System.Drawing.Size(167, 26);
+            this.venderToolStripMenuItem1.Text = "Vender";
+            // 
+            // editarVendaToolStripMenuItem
+            // 
+            this.editarVendaToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.editarVendaToolStripMenuItem.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.editarVendaToolStripMenuItem.Name = "editarVendaToolStripMenuItem";
+            this.editarVendaToolStripMenuItem.Size = new System.Drawing.Size(167, 26);
+            this.editarVendaToolStripMenuItem.Text = "Editar Venda";
+            this.editarVendaToolStripMenuItem.Click += new System.EventHandler(this.editarVendaToolStripMenuItem_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 27);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 32);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(736, 389);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -190,7 +227,6 @@ namespace Confeitaria
         private System.Windows.Forms.ToolStripMenuItem clienteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cadastrarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem excluirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem verTodosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem produtosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cadastrarToolStripMenuItem1;
@@ -199,6 +235,12 @@ namespace Confeitaria
         private System.Windows.Forms.ToolStripMenuItem verTodosToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem relatórioToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ToolStripMenuItem vendasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem venderToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem editarVendaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem vendasToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem venderToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem editarPedidoToolStripMenuItem;
     }
 }
 

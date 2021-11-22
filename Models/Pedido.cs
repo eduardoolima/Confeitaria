@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Confeitaria.Models
+
 {
     public class Pedido
     {
@@ -16,16 +16,16 @@ namespace Confeitaria.Models
         public int idItemLote { get; set; }
         public int qtdPedido { get; set; }
         #endregion
-
+        
         #region Métodos
         public void Add()
         {
-            string sql = $"INSERT INTO Pedido(idPedido, idCompra, idItemLote, qtdPedido) values('{idPedido}', '{idCompra}', '{idItemLote}', '{qtdPedido}')";
+            string sql = $"INSERT INTO Pedido(idCompra, idItemLoteFK, qtdPedido) values('{idCompra}', '{idItemLote}', '{qtdPedido}')";
             dataBase.Execute(sql);
         }
         public void Edit()
         {
-            string sql = $"UPDATE Pedido set idItemLote='{idItemLote}', qtdPedido='{qtdPedido}' WHERE idPedido='{idPedido}'";
+            string sql = $"UPDATE Pedido set qtdPedido='{qtdPedido}' WHERE idPedido='{idPedido}'";
             dataBase.Execute(sql);
         }
         public void Delete()
@@ -46,3 +46,4 @@ namespace Confeitaria.Models
 
     }
 }
+

@@ -32,12 +32,12 @@ namespace Confeitaria
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditarDoce));
             this.cmbProdutos = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dtpDataVenc = new System.Windows.Forms.DateTimePicker();
+            this.dtpDataFab = new System.Windows.Forms.DateTimePicker();
+            this.txtDesc = new System.Windows.Forms.TextBox();
+            this.txtQtd = new System.Windows.Forms.TextBox();
+            this.txtPreco = new System.Windows.Forms.TextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
             this.lbldataVenc = new System.Windows.Forms.Label();
             this.lblDataFab = new System.Windows.Forms.Label();
             this.lblDescricao = new System.Windows.Forms.Label();
@@ -45,6 +45,9 @@ namespace Confeitaria
             this.lblPreco = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnVoltar = new System.Windows.Forms.Button();
+            this.cmdEditar = new System.Windows.Forms.Button();
+            this.cmdExcluir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // cmbProdutos
@@ -55,6 +58,7 @@ namespace Confeitaria
             this.cmbProdutos.Name = "cmbProdutos";
             this.cmbProdutos.Size = new System.Drawing.Size(448, 23);
             this.cmbProdutos.TabIndex = 0;
+            this.cmbProdutos.SelectedIndexChanged += new System.EventHandler(this.cmbProdutos_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -67,49 +71,49 @@ namespace Confeitaria
             this.label1.TabIndex = 1;
             this.label1.Text = "Produto:";
             // 
-            // dateTimePicker2
+            // dtpDataVenc
             // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(535, 266);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(80, 23);
-            this.dateTimePicker2.TabIndex = 23;
+            this.dtpDataVenc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDataVenc.Location = new System.Drawing.Point(535, 266);
+            this.dtpDataVenc.Name = "dtpDataVenc";
+            this.dtpDataVenc.Size = new System.Drawing.Size(80, 23);
+            this.dtpDataVenc.TabIndex = 23;
             // 
-            // dateTimePicker1
+            // dtpDataFab
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(535, 203);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(80, 23);
-            this.dateTimePicker1.TabIndex = 22;
+            this.dtpDataFab.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDataFab.Location = new System.Drawing.Point(535, 203);
+            this.dtpDataFab.Name = "dtpDataFab";
+            this.dtpDataFab.Size = new System.Drawing.Size(80, 23);
+            this.dtpDataFab.TabIndex = 22;
             // 
-            // textBox4
+            // txtDesc
             // 
-            this.textBox4.Location = new System.Drawing.Point(167, 322);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(448, 23);
-            this.textBox4.TabIndex = 21;
+            this.txtDesc.Location = new System.Drawing.Point(167, 322);
+            this.txtDesc.Name = "txtDesc";
+            this.txtDesc.Size = new System.Drawing.Size(448, 23);
+            this.txtDesc.TabIndex = 21;
             // 
-            // textBox3
+            // txtQtd
             // 
-            this.textBox3.Location = new System.Drawing.Point(167, 266);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 23);
-            this.textBox3.TabIndex = 20;
+            this.txtQtd.Location = new System.Drawing.Point(167, 266);
+            this.txtQtd.Name = "txtQtd";
+            this.txtQtd.Size = new System.Drawing.Size(100, 23);
+            this.txtQtd.TabIndex = 20;
             // 
-            // textBox2
+            // txtPreco
             // 
-            this.textBox2.Location = new System.Drawing.Point(167, 203);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 23);
-            this.textBox2.TabIndex = 19;
+            this.txtPreco.Location = new System.Drawing.Point(167, 203);
+            this.txtPreco.Name = "txtPreco";
+            this.txtPreco.Size = new System.Drawing.Size(100, 23);
+            this.txtPreco.TabIndex = 19;
             // 
-            // textBox1
+            // txtNome
             // 
-            this.textBox1.Location = new System.Drawing.Point(167, 143);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(448, 23);
-            this.textBox1.TabIndex = 18;
+            this.txtNome.Location = new System.Drawing.Point(167, 143);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(448, 23);
+            this.txtNome.TabIndex = 18;
             // 
             // lbldataVenc
             // 
@@ -188,18 +192,60 @@ namespace Confeitaria
             this.label2.TabIndex = 24;
             this.label2.Text = "Editar";
             // 
+            // btnVoltar
+            // 
+            this.btnVoltar.BackColor = System.Drawing.Color.GhostWhite;
+            this.btnVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnVoltar.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnVoltar.Location = new System.Drawing.Point(497, 373);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(118, 41);
+            this.btnVoltar.TabIndex = 39;
+            this.btnVoltar.Text = "Voltar";
+            this.btnVoltar.UseVisualStyleBackColor = false;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
+            // 
+            // cmdEditar
+            // 
+            this.cmdEditar.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.cmdEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.cmdEditar.ForeColor = System.Drawing.Color.GhostWhite;
+            this.cmdEditar.Location = new System.Drawing.Point(37, 373);
+            this.cmdEditar.Name = "cmdEditar";
+            this.cmdEditar.Size = new System.Drawing.Size(118, 41);
+            this.cmdEditar.TabIndex = 38;
+            this.cmdEditar.Text = "Editar";
+            this.cmdEditar.UseVisualStyleBackColor = false;
+            this.cmdEditar.Click += new System.EventHandler(this.cmdEditar_Click);
+            // 
+            // cmdExcluir
+            // 
+            this.cmdExcluir.BackColor = System.Drawing.Color.DarkRed;
+            this.cmdExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.cmdExcluir.ForeColor = System.Drawing.Color.GhostWhite;
+            this.cmdExcluir.Location = new System.Drawing.Point(194, 373);
+            this.cmdExcluir.Name = "cmdExcluir";
+            this.cmdExcluir.Size = new System.Drawing.Size(118, 41);
+            this.cmdExcluir.TabIndex = 40;
+            this.cmdExcluir.Text = "Excluir";
+            this.cmdExcluir.UseVisualStyleBackColor = false;
+            this.cmdExcluir.Click += new System.EventHandler(this.cmdExcluir_Click);
+            // 
             // EditarDoce
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(666, 405);
+            this.ClientSize = new System.Drawing.Size(666, 437);
+            this.Controls.Add(this.cmdExcluir);
+            this.Controls.Add(this.btnVoltar);
+            this.Controls.Add(this.cmdEditar);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.dtpDataVenc);
+            this.Controls.Add(this.dtpDataFab);
+            this.Controls.Add(this.txtDesc);
+            this.Controls.Add(this.txtQtd);
+            this.Controls.Add(this.txtPreco);
+            this.Controls.Add(this.txtNome);
             this.Controls.Add(this.lbldataVenc);
             this.Controls.Add(this.lblDataFab);
             this.Controls.Add(this.lblDescricao);
@@ -209,8 +255,10 @@ namespace Confeitaria
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbProdutos);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "EditarDoce";
             this.Text = "EditarDoce";
+            this.Load += new System.EventHandler(this.EditarDoce_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -220,12 +268,12 @@ namespace Confeitaria
 
         private System.Windows.Forms.ComboBox cmbProdutos;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DateTimePicker dtpDataVenc;
+        private System.Windows.Forms.DateTimePicker dtpDataFab;
+        private System.Windows.Forms.TextBox txtDesc;
+        private System.Windows.Forms.TextBox txtQtd;
+        private System.Windows.Forms.TextBox txtPreco;
+        private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label lbldataVenc;
         private System.Windows.Forms.Label lblDataFab;
         private System.Windows.Forms.Label lblDescricao;
@@ -233,5 +281,8 @@ namespace Confeitaria
         private System.Windows.Forms.Label lblPreco;
         private System.Windows.Forms.Label lblNome;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnVoltar;
+        private System.Windows.Forms.Button cmdEditar;
+        private System.Windows.Forms.Button cmdExcluir;
     }
 }

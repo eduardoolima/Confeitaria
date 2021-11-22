@@ -31,18 +31,20 @@ namespace Confeitaria
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroDoces));
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dtpDataVenc = new System.Windows.Forms.DateTimePicker();
+            this.dtpDataFab = new System.Windows.Forms.DateTimePicker();
+            this.txtDesc = new System.Windows.Forms.TextBox();
+            this.txtQtd = new System.Windows.Forms.TextBox();
+            this.txtPreco = new System.Windows.Forms.TextBox();
+            this.txtNome = new System.Windows.Forms.TextBox();
             this.lbldataVenc = new System.Windows.Forms.Label();
             this.lblDataFab = new System.Windows.Forms.Label();
             this.lblDescricao = new System.Windows.Forms.Label();
             this.lblQtd = new System.Windows.Forms.Label();
             this.lblPreco = new System.Windows.Forms.Label();
             this.lblNome = new System.Windows.Forms.Label();
+            this.btnVoltar = new System.Windows.Forms.Button();
+            this.cmdIncluir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -56,49 +58,49 @@ namespace Confeitaria
             this.label1.TabIndex = 12;
             this.label1.Text = "Cadastrar";
             // 
-            // dateTimePicker2
+            // dtpDataVenc
             // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(543, 234);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(80, 23);
-            this.dateTimePicker2.TabIndex = 35;
+            this.dtpDataVenc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDataVenc.Location = new System.Drawing.Point(543, 234);
+            this.dtpDataVenc.Name = "dtpDataVenc";
+            this.dtpDataVenc.Size = new System.Drawing.Size(80, 23);
+            this.dtpDataVenc.TabIndex = 35;
             // 
-            // dateTimePicker1
+            // dtpDataFab
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(543, 171);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(80, 23);
-            this.dateTimePicker1.TabIndex = 34;
+            this.dtpDataFab.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDataFab.Location = new System.Drawing.Point(543, 171);
+            this.dtpDataFab.Name = "dtpDataFab";
+            this.dtpDataFab.Size = new System.Drawing.Size(80, 23);
+            this.dtpDataFab.TabIndex = 34;
             // 
-            // textBox4
+            // txtDesc
             // 
-            this.textBox4.Location = new System.Drawing.Point(175, 290);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(448, 23);
-            this.textBox4.TabIndex = 33;
+            this.txtDesc.Location = new System.Drawing.Point(175, 290);
+            this.txtDesc.Name = "txtDesc";
+            this.txtDesc.Size = new System.Drawing.Size(448, 23);
+            this.txtDesc.TabIndex = 33;
             // 
-            // textBox3
+            // txtQtd
             // 
-            this.textBox3.Location = new System.Drawing.Point(175, 234);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 23);
-            this.textBox3.TabIndex = 32;
+            this.txtQtd.Location = new System.Drawing.Point(175, 234);
+            this.txtQtd.Name = "txtQtd";
+            this.txtQtd.Size = new System.Drawing.Size(100, 23);
+            this.txtQtd.TabIndex = 32;
             // 
-            // textBox2
+            // txtPreco
             // 
-            this.textBox2.Location = new System.Drawing.Point(175, 171);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 23);
-            this.textBox2.TabIndex = 31;
+            this.txtPreco.Location = new System.Drawing.Point(175, 171);
+            this.txtPreco.Name = "txtPreco";
+            this.txtPreco.Size = new System.Drawing.Size(100, 23);
+            this.txtPreco.TabIndex = 31;
             // 
-            // textBox1
+            // txtNome
             // 
-            this.textBox1.Location = new System.Drawing.Point(175, 111);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(448, 23);
-            this.textBox1.TabIndex = 30;
+            this.txtNome.Location = new System.Drawing.Point(175, 111);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(448, 23);
+            this.txtNome.TabIndex = 30;
             // 
             // lbldataVenc
             // 
@@ -166,17 +168,45 @@ namespace Confeitaria
             this.lblNome.TabIndex = 24;
             this.lblNome.Text = "Nome:";
             // 
+            // btnVoltar
+            // 
+            this.btnVoltar.BackColor = System.Drawing.Color.GhostWhite;
+            this.btnVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnVoltar.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnVoltar.Location = new System.Drawing.Point(353, 342);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(118, 41);
+            this.btnVoltar.TabIndex = 37;
+            this.btnVoltar.Text = "Voltar";
+            this.btnVoltar.UseVisualStyleBackColor = false;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
+            // 
+            // cmdIncluir
+            // 
+            this.cmdIncluir.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.cmdIncluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.cmdIncluir.ForeColor = System.Drawing.Color.GhostWhite;
+            this.cmdIncluir.Location = new System.Drawing.Point(209, 342);
+            this.cmdIncluir.Name = "cmdIncluir";
+            this.cmdIncluir.Size = new System.Drawing.Size(118, 41);
+            this.cmdIncluir.TabIndex = 36;
+            this.cmdIncluir.Text = "Incluir";
+            this.cmdIncluir.UseVisualStyleBackColor = false;
+            this.cmdIncluir.Click += new System.EventHandler(this.cmdIncluir_Click);
+            // 
             // CadastroDoces
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(693, 369);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(693, 406);
+            this.Controls.Add(this.btnVoltar);
+            this.Controls.Add(this.cmdIncluir);
+            this.Controls.Add(this.dtpDataVenc);
+            this.Controls.Add(this.dtpDataFab);
+            this.Controls.Add(this.txtDesc);
+            this.Controls.Add(this.txtQtd);
+            this.Controls.Add(this.txtPreco);
+            this.Controls.Add(this.txtNome);
             this.Controls.Add(this.lbldataVenc);
             this.Controls.Add(this.lblDataFab);
             this.Controls.Add(this.lblDescricao);
@@ -185,6 +215,7 @@ namespace Confeitaria
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "CadastroDoces";
             this.Text = "CadastroDoces";
             this.ResumeLayout(false);
@@ -194,17 +225,19 @@ namespace Confeitaria
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DateTimePicker dtpDataVenc;
+        private System.Windows.Forms.DateTimePicker dtpDataFab;
+        private System.Windows.Forms.TextBox txtDesc;
+        private System.Windows.Forms.TextBox txtQtd;
+        private System.Windows.Forms.TextBox txtPreco;
+        private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label lbldataVenc;
         private System.Windows.Forms.Label lblDataFab;
         private System.Windows.Forms.Label lblDescricao;
         private System.Windows.Forms.Label lblQtd;
         private System.Windows.Forms.Label lblPreco;
         private System.Windows.Forms.Label lblNome;
+        private System.Windows.Forms.Button btnVoltar;
+        private System.Windows.Forms.Button cmdIncluir;
     }
 }
