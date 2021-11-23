@@ -1,1 +1,2 @@
 ﻿Erro no comando SQL (GET)- 22/11/2021 01:09:47 - Nome de coluna 'idProduto' inválido.
+Erro ao executar comando SQL - 22/11/2021 23:19:19 - Não é possível converter um valor char em money. A sintaxe do valor char está incorreta.

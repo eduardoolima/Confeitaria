@@ -82,7 +82,7 @@ namespace Confeitaria
             {
                 client.GetOnlyIdByName(cmbCliente.Text);
                 comp.idCliente = client.IdCliente;
-                comp.valorCompra = txtPrecoTotal.Text;
+                comp.valorCompra = valorTotal.ToString();
                 comp.dataCompra = dateTimePicker1.Value;
                 comp.Add();
                 comp.GetCompraByIdCliente(client.IdCliente);

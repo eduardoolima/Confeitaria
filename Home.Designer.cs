@@ -80,7 +80,7 @@ namespace Confeitaria
             // 
             this.cadastrarToolStripMenuItem.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.cadastrarToolStripMenuItem.Name = "cadastrarToolStripMenuItem";
-            this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(147, 26);
             this.cadastrarToolStripMenuItem.Text = "Cadastrar";
             this.cadastrarToolStripMenuItem.Click += new System.EventHandler(this.cadastrarToolStripMenuItem_Click);
             // 
@@ -88,14 +88,15 @@ namespace Confeitaria
             // 
             this.editarToolStripMenuItem.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
-            this.editarToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.editarToolStripMenuItem.Size = new System.Drawing.Size(147, 26);
             this.editarToolStripMenuItem.Text = "Editar";
+            this.editarToolStripMenuItem.Click += new System.EventHandler(this.editarToolStripMenuItem_Click);
             // 
             // verTodosToolStripMenuItem
             // 
             this.verTodosToolStripMenuItem.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.verTodosToolStripMenuItem.Name = "verTodosToolStripMenuItem";
-            this.verTodosToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
+            this.verTodosToolStripMenuItem.Size = new System.Drawing.Size(147, 26);
             this.verTodosToolStripMenuItem.Text = "Relatório";
             this.verTodosToolStripMenuItem.Click += new System.EventHandler(this.verTodosToolStripMenuItem_Click);
             // 
@@ -160,6 +161,7 @@ namespace Confeitaria
             this.editarPedidoToolStripMenuItem.Name = "editarPedidoToolStripMenuItem";
             this.editarPedidoToolStripMenuItem.Size = new System.Drawing.Size(186, 26);
             this.editarPedidoToolStripMenuItem.Text = "Editar Pedido";
+            this.editarPedidoToolStripMenuItem.Click += new System.EventHandler(this.editarPedidoToolStripMenuItem_Click);
             // 
             // vendasToolStripMenuItem
             // 

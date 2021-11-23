@@ -69,5 +69,17 @@ namespace Confeitaria
             Relatorio relatorio = new Relatorio();
             relatorio.ShowDialog();
         }
+
+        private void editarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditCliente editarCliente = new EditCliente();
+            editarCliente.ShowDialog();
+        }
+
+        private void editarPedidoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditarPedido editarPedido = new EditarPedido();
+            editarPedido.ShowDialog();
+        }
     }
 }

@@ -18,7 +18,7 @@ namespace Confeitaria.Models
         #region Métodos
         public void Add()
         {
-            string sql = $"INSERT INTO Compra( idClienteFK, dataCompra, valorCompra) values('{idCliente}', '{dataCompra}','{valorCompra.Replace(",", ".")}')";
+            string sql = $"INSERT INTO Compra( idClienteFK, dataCompra, valorCompra) values('{idCliente}', '{dataCompra}','{valorCompra.Replace(",",".")}')";
             dataBase.Execute(sql);
         }
         public void Edit()
@@ -26,15 +26,20 @@ namespace Confeitaria.Models
             string sql = $"UPDATE Compra set dataCompra='{dataCompra}', valorCompra='{valorCompra.Replace(",", ".")}' WHERE idCompra='{idCompra}'";
             dataBase.Execute(sql);
         }
-        public void Delete()
+        public void Delete(int id)
         {
-            string sql = $"DELETE Compra WHERE idCompra='{idCompra}'";
+            string sql = $"DELETE Compra WHERE idCompra='{id}'";
             dataBase.Execute(sql);
         }
-        public void GetByidCompra()
+        public void GetByidCompra(int id)
         {
-            string sql = $"SELECT * FROM Compra WHERE idCompra='{idCompra}'";
-            dataBase.Execute(sql);
+            string sql = $"SELECT * FROM Compra WHERE idCompra='{id}'";
+            dataBase.Get(sql);
+            string[] aux = dataBase.Campos.Split(';');
+            idCompra = int.Parse(aux[0]);
+            idCliente = int.Parse(aux[1]);
+            dataCompra = DateTime.Parse(aux[2]);
+            valorCompra = aux[3];
         }
         public void GetCompraByIdCliente(int id)
         {
