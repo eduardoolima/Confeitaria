@@ -31,26 +31,38 @@ namespace Confeitaria.Models
             dataBase.Execute(sql);
         }
 
-        public void Delete()
+        public void Delete(int id)
         {
-            string sql = "Delete from Telefone Where idTelefone = " + IdTel.ToString();
+            string sql = $"Delete from Telefone Where idTelefone = {id}";
             dataBase.Execute(sql);
         }
 
-        public void Edit()
+        public void DeleteAll(int ClientId)
+        {
+            string sql = $"Delete from Telefone Where idCliente = {ClientId}";
+            dataBase.Execute(sql);
+        }
+
+        public void Edit(int clientId)
         {
             string sql = "";
-            sql += $"Update Telefone SET telefone = '{Tel}";
+            sql += $"Update Telefone SET telefone = '{Tel}' where idCliente = '{clientId}'";
             dataBase.Execute(sql);
         }
 
         public void GetByClientName(string name)
         {
-            string sql = $"select c.nome, t.telefone from Telefone t join Cliente c on t.idCliente = c.idCliente where c.nome = '{name}'";
+            string sql = $"select t.telefone, c.idCliente from Telefone t join Cliente c on t.idCliente = c.idCliente where c.nome = '{name}'";
             dataBase.Get(sql);
             string[] aux = dataBase.Campos.Split(';');
             Tel = aux[0];
             IdCliente = int.Parse(aux[1]);
+        }
+
+        public DataSet ListByClientName(string name)
+        {
+            string sql = $"select t.telefone from Telefone t join Cliente c on t.idCliente = c.idCliente where c.nome = '{name}'";
+            return dataBase.List(sql);
         }
 
         public DataSet ListAll()

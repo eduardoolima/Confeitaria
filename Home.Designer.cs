@@ -39,10 +39,8 @@ namespace Confeitaria
             this.cadastrarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.editarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.verTodosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.verTodosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.vendasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.venderToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.editarVendaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editarVendaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
@@ -79,7 +77,7 @@ namespace Confeitaria
             // 
             this.cadastrarToolStripMenuItem.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.cadastrarToolStripMenuItem.Name = "cadastrarToolStripMenuItem";
-            this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(147, 26);
+            this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.cadastrarToolStripMenuItem.Text = "Cadastrar";
             this.cadastrarToolStripMenuItem.Click += new System.EventHandler(this.cadastrarToolStripMenuItem_Click);
             // 
@@ -87,14 +85,15 @@ namespace Confeitaria
             // 
             this.editarToolStripMenuItem.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
-            this.editarToolStripMenuItem.Size = new System.Drawing.Size(147, 26);
+            this.editarToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.editarToolStripMenuItem.Text = "Editar";
+            this.editarToolStripMenuItem.Click += new System.EventHandler(this.editarToolStripMenuItem_Click);
             // 
             // verTodosToolStripMenuItem
             // 
             this.verTodosToolStripMenuItem.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.verTodosToolStripMenuItem.Name = "verTodosToolStripMenuItem";
-            this.verTodosToolStripMenuItem.Size = new System.Drawing.Size(147, 26);
+            this.verTodosToolStripMenuItem.Size = new System.Drawing.Size(180, 26);
             this.verTodosToolStripMenuItem.Text = "Ver Todos";
             // 
             // produtosToolStripMenuItem
@@ -123,8 +122,7 @@ namespace Confeitaria
             this.editarToolStripMenuItem1.Name = "editarToolStripMenuItem1";
             this.editarToolStripMenuItem1.Size = new System.Drawing.Size(147, 26);
             this.editarToolStripMenuItem1.Text = "Editar";
-            this.editarToolStripMenuItem1.Click += new System.EventHandler(this.editarToolStripMenuItem1_Click); 
-
+            this.editarToolStripMenuItem1.Click += new System.EventHandler(this.editarToolStripMenuItem1_Click);
             // 
             // verTodosToolStripMenuItem1
             // 
@@ -132,7 +130,6 @@ namespace Confeitaria
             this.verTodosToolStripMenuItem1.Name = "verTodosToolStripMenuItem1";
             this.verTodosToolStripMenuItem1.Size = new System.Drawing.Size(147, 26);
             this.verTodosToolStripMenuItem1.Text = "Ver Todos";
-            
             // 
             // vendasToolStripMenuItem
             // 

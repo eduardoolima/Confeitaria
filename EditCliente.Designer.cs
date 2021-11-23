@@ -86,6 +86,7 @@ namespace Confeitaria
             this.btnGravar.TabIndex = 47;
             this.btnGravar.Text = "Gravar";
             this.btnGravar.UseVisualStyleBackColor = false;
+            this.btnGravar.Click += new System.EventHandler(this.btnGravar_Click);
             // 
             // btnAddTelefone
             // 
@@ -98,6 +99,7 @@ namespace Confeitaria
             this.btnAddTelefone.TabIndex = 46;
             this.btnAddTelefone.Text = "Adicionar";
             this.btnAddTelefone.UseVisualStyleBackColor = false;
+            this.btnAddTelefone.Click += new System.EventHandler(this.btnAddTelefone_Click);
             // 
             // txtTelefone
             // 
@@ -138,7 +140,7 @@ namespace Confeitaria
             // 
             // txtRua
             // 
-            this.txtRua.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.txtRua.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtRua.Location = new System.Drawing.Point(119, 387);
             this.txtRua.Name = "txtRua";
             this.txtRua.Size = new System.Drawing.Size(322, 23);
@@ -146,7 +148,7 @@ namespace Confeitaria
             // 
             // txtCidade
             // 
-            this.txtCidade.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.txtCidade.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtCidade.Location = new System.Drawing.Point(119, 345);
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(322, 23);
@@ -154,7 +156,7 @@ namespace Confeitaria
             // 
             // txtNome
             // 
-            this.txtNome.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.txtNome.ForeColor = System.Drawing.Color.Black;
             this.txtNome.Location = new System.Drawing.Point(157, 73);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(444, 23);
@@ -162,7 +164,7 @@ namespace Confeitaria
             // 
             // txtEmail
             // 
-            this.txtEmail.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.txtEmail.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txtEmail.Location = new System.Drawing.Point(157, 117);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(444, 23);
@@ -278,6 +280,7 @@ namespace Confeitaria
             this.btnRemoveTel.Size = new System.Drawing.Size(36, 30);
             this.btnRemoveTel.TabIndex = 49;
             this.btnRemoveTel.UseVisualStyleBackColor = false;
+            this.btnRemoveTel.Click += new System.EventHandler(this.btnRemoveTel_Click);
             // 
             // btnDelete
             // 
@@ -313,7 +316,7 @@ namespace Confeitaria
             this.pnlView.Controls.Add(this.btnVoltarHome);
             this.pnlView.Controls.Add(this.lblClentes);
             this.pnlView.Controls.Add(this.dataGridView1);
-            this.pnlView.Location = new System.Drawing.Point(12, 9);
+            this.pnlView.Location = new System.Drawing.Point(2, 9);
             this.pnlView.Name = "pnlView";
             this.pnlView.Size = new System.Drawing.Size(786, 537);
             this.pnlView.TabIndex = 55;
@@ -329,6 +332,7 @@ namespace Confeitaria
             this.btnVoltarHome.TabIndex = 49;
             this.btnVoltarHome.Text = "Voltar";
             this.btnVoltarHome.UseVisualStyleBackColor = false;
+            this.btnVoltarHome.Click += new System.EventHandler(this.btnVoltarHome_Click);
             // 
             // lblClentes
             // 
@@ -347,12 +351,12 @@ namespace Confeitaria
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(15, 61);
+            this.dataGridView1.Location = new System.Drawing.Point(15, 50);
             this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(748, 389);
+            this.dataGridView1.Size = new System.Drawing.Size(745, 389);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 

@@ -20,7 +20,7 @@ namespace Confeitaria.Models
         public string Rua { get; set; }
         public string Cep { get; set; }
         public string Numero { get; set; }
-        public List<string> Telefones { get; set; }
+
 
         #endregion
 
@@ -39,18 +39,33 @@ namespace Confeitaria.Models
             dataBase.Execute(sql);
         }
 
-        public void Delete()
+        public void Delete(int id)
         {
-            string sql = "Delete from Cliente Where idCliente = " + IdCliente.ToString();
+            string sql = $"Delete from Cliente Where idCliente = '{id}'";
             dataBase.Execute(sql);
         }
 
-        public void Edit()
+        public void Edit(int id)
         {
             string sql = "";
-            sql += "Update Cliente SET nome, email, dataNascimento, rua, numEndereco, cidade, cep = " +
-                "'" + Nome + "', '" + Email + "', '" + DataNasc + "', '" + Rua + "','" + Numero + "', '" + Cidade + "','" + Cep;
+            sql += $"Update Cliente SET nome = '{Nome}', email = '{Email}', dataNascimento = '{DataNasc}', rua = '{Rua}'," +
+                $" numEndereco = '{Numero}', cidade =  '{Cidade}', cep = '{Cep}' Where idCliente = {id}";
             dataBase.Execute(sql);
+        }
+
+        public void GetById(int id)
+        {
+            string sql = $"select * from Cliente where idCliente = '{id}'";
+            dataBase.Get(sql);
+            string[] aux = dataBase.Campos.Split(';');
+            IdCliente = int.Parse(aux[0]);
+            Nome = aux[1];
+            Email = aux[2];
+            DataNasc = DateTime.Parse(aux[3]);
+            Rua = aux[4];
+            Numero = aux[5];
+            Cidade = aux[6];
+            Cep = aux[7];
         }
 
         public void GetByName(string name)
@@ -66,9 +81,6 @@ namespace Confeitaria.Models
             Numero = aux[5];
             Cidade = aux[6];
             Cep = aux[7];
-            string sqlTel = $"select telefone from Telefone t join Cliente c on t.idCliente = c.idCliente where nome = '{name}'";
-            dataBase.List(sqlTel);
-            Telefones = dataBase.Campos.Split(';').ToList();
         }
 
         public void GetOnlyIdByName(string name)

@@ -43,7 +43,6 @@ namespace Confeitaria
             this.txtNome = new System.Windows.Forms.TextBox();
             this.txtCidade = new System.Windows.Forms.TextBox();
             this.txtRua = new System.Windows.Forms.TextBox();
-            this.txtCep = new System.Windows.Forms.TextBox();
             this.dtpDataNascimento = new System.Windows.Forms.DateTimePicker();
             this.lblTelefone = new System.Windows.Forms.Label();
             this.lbTelefones = new System.Windows.Forms.ListBox();
@@ -53,6 +52,7 @@ namespace Confeitaria
             this.btnVoltar = new System.Windows.Forms.Button();
             this.btnRemoveTel = new System.Windows.Forms.Button();
             this.txtNumero = new System.Windows.Forms.TextBox();
+            this.txtCep = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // lblNomeCliente
@@ -155,7 +155,7 @@ namespace Confeitaria
             // 
             // txtEmail
             // 
-            this.txtEmail.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.txtEmail.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtEmail.Location = new System.Drawing.Point(157, 117);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(444, 23);
@@ -163,7 +163,7 @@ namespace Confeitaria
             // 
             // txtNome
             // 
-            this.txtNome.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.txtNome.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtNome.Location = new System.Drawing.Point(157, 73);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(444, 23);
@@ -171,7 +171,7 @@ namespace Confeitaria
             // 
             // txtCidade
             // 
-            this.txtCidade.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.txtCidade.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtCidade.Location = new System.Drawing.Point(119, 345);
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(322, 23);
@@ -179,19 +179,11 @@ namespace Confeitaria
             // 
             // txtRua
             // 
-            this.txtRua.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.txtRua.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtRua.Location = new System.Drawing.Point(119, 383);
             this.txtRua.Name = "txtRua";
             this.txtRua.Size = new System.Drawing.Size(322, 23);
             this.txtRua.TabIndex = 14;
-            // 
-            // txtCep
-            // 
-            this.txtCep.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.txtCep.Location = new System.Drawing.Point(119, 424);
-            this.txtCep.Name = "txtCep";
-            this.txtCep.Size = new System.Drawing.Size(322, 23);
-            this.txtCep.TabIndex = 15;
             // 
             // dtpDataNascimento
             // 
@@ -289,10 +281,19 @@ namespace Confeitaria
             // txtNumero
             // 
             this.txtNumero.Cursor = System.Windows.Forms.Cursors.SizeNS;
+            this.txtNumero.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtNumero.Location = new System.Drawing.Point(484, 382);
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(100, 23);
             this.txtNumero.TabIndex = 26;
+            // 
+            // txtCep
+            // 
+            this.txtCep.Location = new System.Drawing.Point(119, 422);
+            this.txtCep.Mask = "#####-###";
+            this.txtCep.Name = "txtCep";
+            this.txtCep.Size = new System.Drawing.Size(322, 23);
+            this.txtCep.TabIndex = 27;
             // 
             // CadastroCliente
             // 
@@ -300,6 +301,7 @@ namespace Confeitaria
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(800, 558);
+            this.Controls.Add(this.txtCep);
             this.Controls.Add(this.txtNumero);
             this.Controls.Add(this.btnRemoveTel);
             this.Controls.Add(this.btnVoltar);
@@ -309,7 +311,6 @@ namespace Confeitaria
             this.Controls.Add(this.lbTelefones);
             this.Controls.Add(this.lblTelefone);
             this.Controls.Add(this.dtpDataNascimento);
-            this.Controls.Add(this.txtCep);
             this.Controls.Add(this.txtRua);
             this.Controls.Add(this.txtCidade);
             this.Controls.Add(this.txtNome);
@@ -347,7 +348,6 @@ namespace Confeitaria
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.TextBox txtCidade;
         private System.Windows.Forms.TextBox txtRua;
-        private System.Windows.Forms.TextBox txtCep;
         private System.Windows.Forms.DateTimePicker dtpDataNascimento;
         private System.Windows.Forms.Label lblTelefone;
         private System.Windows.Forms.ListBox lbTelefones;
@@ -357,5 +357,6 @@ namespace Confeitaria
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Button btnRemoveTel;
         private System.Windows.Forms.TextBox txtNumero;
+        private System.Windows.Forms.MaskedTextBox txtCep;
     }
 }

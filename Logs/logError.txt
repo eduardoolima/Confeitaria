@@ -78,3 +78,7 @@ A instrução foi finalizada.
 Erro ao Excluir produto - 15/11/2021 18:57:19 - Exception of type 'System.Exception' was thrown.
 Erro ao executar comando SQL - 15/11/2021 18:58:57 - Nome de coluna 'idLote' inválido.
 Erro ao Excluir produto - 15/11/2021 18:58:57 - Exception of type 'System.Exception' was thrown.
+Erro ao executar comando SQL - 22/11/2021 21:56:58 - A instrução DELETE conflitou com a restrição do REFERENCE "FK__Telefone__idClie__38996AB5". O conflito ocorreu no banco de dados "Confeitaria", tabela "dbo.Telefone", column 'idCliente'.
+A instrução foi finalizada.
+Erro ao editar cliente - 22/11/2021 23:34:43 - Input string was not in a correct format.
+Erro ao editar cliente - 22/11/2021 23:34:51 - Input string was not in a correct format.

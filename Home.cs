@@ -57,5 +57,11 @@ namespace Confeitaria
             EditarDoce editarDoce = new();
             editarDoce.ShowDialog();
         }
+
+        private void editarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditCliente editCliente = new();
+            editCliente.ShowDialog();
+        }
     }
 }
