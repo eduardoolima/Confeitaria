@@ -54,7 +54,7 @@ namespace Confeitaria
                 {
                     sw.WriteLine("Erro ao incluir produto - " + DateTime.Now.ToString() + " - " + ex.Message.ToString());
                 }
-
+                MessageBox.Show("Houve um erro ao registrar as informações do doce!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
