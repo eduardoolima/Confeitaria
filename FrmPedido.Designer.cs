@@ -46,6 +46,7 @@ namespace Confeitaria
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.button1 = new System.Windows.Forms.Button();
             this.cmdVoltar = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,7 +55,7 @@ namespace Confeitaria
             this.lbCarrinho.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.lbCarrinho.FormattingEnabled = true;
             this.lbCarrinho.ItemHeight = 15;
-            this.lbCarrinho.Location = new System.Drawing.Point(580, 100);
+            this.lbCarrinho.Location = new System.Drawing.Point(580, 56);
             this.lbCarrinho.Name = "lbCarrinho";
             this.lbCarrinho.Size = new System.Drawing.Size(195, 154);
             this.lbCarrinho.TabIndex = 22;
@@ -229,12 +230,27 @@ namespace Confeitaria
             this.cmdVoltar.UseVisualStyleBackColor = false;
             this.cmdVoltar.Click += new System.EventHandler(this.cmdVoltar_Click);
             // 
+            // btnClear
+            // 
+            this.btnClear.BackColor = System.Drawing.Color.GhostWhite;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClear.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnClear.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnClear.Location = new System.Drawing.Point(682, 216);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(90, 30);
+            this.btnClear.TabIndex = 34;
+            this.btnClear.Text = "Esvaziar";
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
             // FrmPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnClear);
             this.Controls.Add(this.cmdVoltar);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label6);
@@ -280,5 +296,6 @@ namespace Confeitaria
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button cmdVoltar;
+        private System.Windows.Forms.Button btnClear;
     }
 }

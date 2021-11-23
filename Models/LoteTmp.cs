@@ -21,7 +21,7 @@ namespace Confeitaria.Models
         }
         public void Edit()
         {
-            string sql = $"update Lote set qtdProdTmp = '{qtdProdTmp}' where idProduto = '{idProdutoTmp}'";
+            string sql = $"update LoteTmp set qtdProdTmp = '{qtdProdTmp}' where idProdutoTmp = '{idProdutoTmp}'";
             database.Execute(sql);
         }
         public void Delete()

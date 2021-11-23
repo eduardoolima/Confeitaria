@@ -37,7 +37,7 @@ namespace Confeitaria
         private void cmbProdutos_SelectedIndexChanged(object sender, EventArgs e)
         {
             p.idProduto = Convert.ToInt32(cmbProdutos.SelectedValue);
-            p.ListById(p.idProduto);
+            p.GetById(p.idProduto);
             txtNome.Text = p.nomeProduto;
             txtPreco.Text = p.precoProduto;
             txtDesc.Text = p.descricao;

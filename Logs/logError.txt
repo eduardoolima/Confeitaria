@@ -1,2 +1,11 @@
 ﻿Erro no comando SQL (GET)- 22/11/2021 01:09:47 - Nome de coluna 'idProduto' inválido.
 Erro ao executar comando SQL - 22/11/2021 23:19:19 - Não é possível converter um valor char em money. A sintaxe do valor char está incorreta.
+Erro ao executar comando SQL - 23/11/2021 03:50:58 - Nome de coluna 'idProdutoTmp' inválido.
+Erro ao realizar o pedido - 23/11/2021 04:41:04 - Input string was not in a correct format.
+Erro ao realizar o pedido - 23/11/2021 04:41:10 - Input string was not in a correct format.
+Erro ao executar comando SQL - 23/11/2021 04:49:27 - Nome de coluna 'idCompraFK' inválido.
+Erro ao realizar o pedido - 23/11/2021 04:49:27 - Exception of type 'System.Exception' was thrown.
+Erro ao executar comando SQL - 23/11/2021 04:53:41 - A instrução DELETE conflitou com a restrição do REFERENCE "FK__Pedido__idCompra__4316F928". O conflito ocorreu no banco de dados "Confeitaria", tabela "dbo.Pedido", column 'idCompraFK'.
+A instrução foi finalizada.
+Erro ao executar comando SQL - 23/11/2021 04:58:48 - A instrução DELETE conflitou com a restrição do REFERENCE "FK__Pedido__idCompra__4316F928". O conflito ocorreu no banco de dados "Confeitaria", tabela "dbo.Pedido", column 'idCompraFK'.
+A instrução foi finalizada.

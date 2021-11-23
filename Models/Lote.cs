@@ -15,6 +15,7 @@ namespace Confeitaria.Models
         public DateTime dataValidade { get; set; }
         public int idProduto { get; set; }
         DBConect database = new();
+        private object dataBase;
 
         public Lote()
         {
@@ -47,7 +48,7 @@ namespace Confeitaria.Models
             dataFabricacao = DateTime.Parse(aux[2]);
             dataValidade = DateTime.Parse(aux[3]);
         }
-        public void GetLoteByProductId(int id)
+        public void GetByProductId(int id)
         {
             string sql = $"select idItemLote,qtdProd, dataFabricacao,dataValidade,idProdutoFK from Lote l join Produto p on l.idProdutoFK = p.idProduto where l.idProdutoFK = '{id}'";
             database.Get(sql);
@@ -59,6 +60,10 @@ namespace Confeitaria.Models
             idProduto = int.Parse(aux[4]);
         }
 
-
+        public DataSet ListAll()
+        {
+            string sql = "select * from Lote";
+            return database.List(sql);
+        }
     }
 }

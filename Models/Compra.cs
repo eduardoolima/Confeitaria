@@ -41,7 +41,7 @@ namespace Confeitaria.Models
             dataCompra = DateTime.Parse(aux[2]);
             valorCompra = aux[3];
         }
-        public void GetCompraByIdCliente(int id)
+        public void GetByIdCliente(int id)
         {
             string sql = $"SELECT idCompra, idClienteFK, dataCompra, valorCompra FROM Compra c INNER JOIN Cliente cl on c.idClienteFK = cl.idCliente where c.idClienteFK={id}";
             dataBase.Get(sql);

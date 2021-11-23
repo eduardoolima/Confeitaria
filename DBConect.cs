@@ -7,7 +7,7 @@ namespace Confeitaria
 {
     class DBConect
     {
-        private readonly string path = @"C:\Users\Fabio\source\repos\Confeitaria\Logs\logError.txt";
+        private readonly string path = @"C:\Unifenas\4periodo\AtvIntegradoras\Confeitaria\Logs\logError.txt";
 
         private SqlConnection cn = new();
         private SqlCommand cmd = new();
@@ -18,11 +18,11 @@ namespace Confeitaria
         public string Campos { get; set; }
 
         public void Conect()
-       {
+        {
             try
             {
                 string s = "";
-                s = @"SERVER=DESKTOP-99SVNVC\SQLEXPRESS;Database=Confeitaria;UID=sa;PWD=123";
+                s = @"SERVER=localhost;Database=Confeitaria;UID=sa;PWD=12345678";
                 cn.ConnectionString = s;
                 cn.Open();
             }
@@ -55,7 +55,7 @@ namespace Confeitaria
             {
                 using (StreamWriter sw = File.AppendText(path))
                 {
-                    sw.WriteLine("Erro ao executar comando SQL - " + DateTime.Now.ToString() + " - " + ex.Message.ToString());                    
+                    sw.WriteLine("Erro ao executar comando SQL - " + DateTime.Now.ToString() + " - " + ex.Message.ToString());
                 }
                 cn.Close();
                 throw new Exception();
@@ -123,6 +123,6 @@ namespace Confeitaria
             dr = cmd.ExecuteReader();
             Disconnect();
         }
-        
+
     }
 }

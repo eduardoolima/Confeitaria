@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Confeitaria.Models;
 
@@ -15,32 +10,27 @@ namespace Confeitaria
 
     public partial class FrmPedido : Form
     {
-        private readonly string path = @"C:\Users\Fabio\source\repos\Confeitaria\Logs\logError.txt";
+        private readonly string path = @"C:\Unifenas\4periodo\AtvIntegradoras\Confeitaria\Logs\logError.txt";
         public FrmPedido()
         {
             InitializeComponent();
-
         }
-        private Produto prod = new Produto();
-        private Cliente client = new Cliente();
-        private Pedido ped = new Pedido();
-        private Lote lot = new Lote();
-        private LoteTmp lottmp = new LoteTmp();
-        private Compra comp = new Compra();
+
         private decimal valorTotal;
         private int qtdDisponivel = 0;
         private int qtdDisponivelInicial = 0;
-        private List<Produto> listProduto = new List<Produto>();
-
+        int idProduto = 0;
         void CarregaCombo()
         {
+            Produto p = new();
+            Cliente c = new();
             cmbProduto.DisplayMember = "nomeProd";
             cmbProduto.ValueMember = "idProduto";
-            cmbProduto.DataSource = prod.ListarDados().Tables[0];
+            cmbProduto.DataSource = p.ListarDados().Tables[0];
 
             cmbCliente.DisplayMember = "nome";
             cmbCliente.ValueMember = "idCliente";
-            cmbCliente.DataSource = client.ListAll().Tables[0];
+            cmbCliente.DataSource = c.ListAll().Tables[0];
 
         }
 
@@ -48,20 +38,43 @@ namespace Confeitaria
         {
             CarregaCombo();
 
-            qtdDisponivel = lot.qtdProd;
-            numericUpDown1.Maximum = qtdDisponivel;
-            lottmp.Delete();
-            lot.ListarDadosLote();
-            lottmp.qtdProdTmp = qtdDisponivel;
-            lottmp.idProdutoTmp = prod.idProduto;
-            lottmp.Add();
-            listProduto.Add(prod);
+            Lote l = new();
+            LoteTmp lt = new();
+            lt.Delete();
+
+            var listLote = l.ListAll().Tables[0].AsEnumerable()
+                .Select(dataRow => new Lote
+                {
+                    idItemLote = dataRow.Field<int>("idItemLote"),
+                    qtdProd = dataRow.Field<int>("qtdProd"),
+                    idProduto = dataRow.Field<int>("idProdutoFK")
+                }).ToList();
+
+            foreach(var item in listLote)
+            {
+                lt.qtdProdTmp = item.qtdProd;
+                lt.idProdutoTmp = item.idProduto;
+                lt.Add();
+            }
+            txtPreco.Text = string.Empty;
+            try
+            {
+                cmbProduto.SelectedIndex = -1;
+            }
+            catch{ }
+            try
+            {
+                cmbCliente.SelectedIndex = -1;
+            }
+            catch { }
         }
 
         private void cmbCliente_SelectedIndexChanged(object sender, EventArgs e)
         {
-            client.IdCliente = Convert.ToInt32(cmbCliente.SelectedValue);
-            client.ListById(client.IdCliente);
+            Cliente c = new();
+
+            c.IdCliente = Convert.ToInt32(cmbCliente.SelectedValue);
+            c.ListById(c.IdCliente);
             
             numericUpDown1.Maximum = qtdDisponivelInicial;
             valorTotal = 0;
@@ -70,43 +83,69 @@ namespace Confeitaria
 
         private void cmbProduto_SelectedIndexChanged(object sender, EventArgs e)
         {
-            prod.idProduto = Convert.ToInt32(cmbProduto.SelectedValue);
-            prod.ListById(prod.idProduto);
-            txtPreco.Text = prod.precoProduto;
-            lot.idProduto = prod.GetId(prod.nomeProduto);
-            lot.ListarDadosLote();
-            qtdDisponivel = lottmp.qtdProdTmp;
-            numericUpDown1.Value = 0;
-            numericUpDown1.Maximum = lottmp.qtdProdTmp;
+            LoteTmp lt = new();
+            Produto p = new();
+
+            idProduto = Convert.ToInt32(cmbProduto.SelectedValue);
+            if (idProduto > 0)
+            {
+                p.GetById(idProduto);
+                lt.GetByProductId(idProduto);
+                qtdDisponivel = lt.qtdProdTmp;
+                txtPreco.Text = p.precoProduto;
+                numericUpDown1.Value = 0;
+                numericUpDown1.Maximum = lt.qtdProdTmp;
+            }
+
         }
 
         private void cmdFinalizar_Click(object sender, EventArgs e)
         {
             try
             {
-                client.GetOnlyIdByName(cmbCliente.Text);
-                comp.idCliente = client.IdCliente;
-                comp.valorCompra = valorTotal.ToString();
-                comp.dataCompra = dateTimePicker1.Value;
-                comp.Add();
-                comp.GetCompraByIdCliente(client.IdCliente);
-                ped.idCompra = comp.idCompra;
-                ped.qtdPedido++;
-                lot.GetLoteByProductId(prod.idProduto);
-                ped.idItemLote = lot.idItemLote;
-                lottmp.GetByProductId(prod.idProduto);
-                if (lot.idProduto == lottmp.idProdutoTmp)
+                if(lbCarrinho.Items.Count > 0)
                 {
-                    lot.qtdProd = lottmp.qtdProdTmp;
-                }
-                ped.Add();
-                lot.Edit();
+                    Cliente cliente = new();
+                    Compra compra = new();
+                    Pedido pedido = new();
+                    Lote lote = new();
+                    LoteTmp loteTmp = new();
+                    Produto produto = new();
 
-                MessageBox.Show("Pedido Realizado!");
-                lottmp.Delete();
-                txtPreco.Clear();
-                txtPrecoTotal.Clear();
-                lbCarrinho.Items.Clear();
+                    cliente.GetOnlyIdByName(cmbCliente.Text);
+                    compra.idCliente = cliente.IdCliente;
+                    compra.valorCompra = valorTotal.ToString();
+                    compra.dataCompra = dateTimePicker1.Value;
+                    compra.Add();
+                    compra.GetByIdCliente(cliente.IdCliente);
+                    pedido.idCompra = compra.idCompra;
+                    pedido.qtdPedido++;
+                    foreach(var item in lbCarrinho.Items)
+                    {
+                        produto.GetByName(item.ToString());
+                        lote.GetByProductId(produto.idProduto);
+                        pedido.idItemLote = lote.idItemLote;
+                        loteTmp.GetByProductId(produto.idProduto);
+                        if (lote.idProduto == loteTmp.idProdutoTmp)
+                        {
+                            lote.qtdProd = loteTmp.qtdProdTmp;
+                        }
+                    }
+                    
+                    pedido.Add();
+                    lote.Edit();
+
+                    MessageBox.Show("Pedido Realizado!");
+                    loteTmp.Delete();
+                    txtPreco.Clear();
+                    txtPrecoTotal.Clear();
+                    lbCarrinho.Items.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("Defina o Pedido!", "Alerta!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                
             }
             catch (Exception ex)
             {
@@ -114,38 +153,76 @@ namespace Confeitaria
                 {
                     sw.WriteLine("Erro ao realizar o pedido - " + DateTime.Now.ToString() + " - " + ex.Message.ToString());
                 }
-
+                MessageBox.Show("Erro ao realizar o pedido!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
+        #region controles carrinho
         private void cmdAdicionarCarrinho_Click(object sender, EventArgs e)
         {
-
-            for (int i = 0; i < numericUpDown1.Value; i++)
+            if (cmbProduto.SelectedIndex != -1 && cmbCliente.SelectedIndex != -1)
             {
-                if (qtdDisponivel > 0)
+                LoteTmp lt = new();
+                Produto p = new();
+                p.GetById(idProduto);
+
+                for (int i = 0; i < numericUpDown1.Value; i++)
                 {
-                    valorTotal += Convert.ToDecimal(txtPreco.Text);
-                    lbCarrinho.Items.Add(prod.nomeProduto);
-                    qtdDisponivel--;
+                    if (qtdDisponivel > 0)
+                    {
+                        valorTotal += Convert.ToDecimal(txtPreco.Text);
+                        lbCarrinho.Items.Add(p.nomeProduto);
+                        qtdDisponivel--;
+                    }
                 }
+                lt.qtdProdTmp = qtdDisponivel;
+                lt.idProdutoTmp = idProduto;
+                lt.Edit();
+                numericUpDown1.Value = 0;
+                txtPrecoTotal.Text = "R$ " + valorTotal.ToString("F2");
+                numericUpDown1.Maximum = qtdDisponivel;
+                cmbCliente.Enabled = false;
             }
-            lottmp.qtdProdTmp = qtdDisponivel;
-            lottmp.idProdutoTmp = prod.idProduto;
-            lottmp.Add();
-            listProduto.Add(prod);
-            numericUpDown1.Value = 0;
-            txtPrecoTotal.Text = "R$ " + valorTotal.ToString("F2");
-            numericUpDown1.Maximum = qtdDisponivel;
-            cmbCliente.Enabled = false;
+            else
+            {
+                MessageBox.Show("Defina o cliente e o produto!", "Alerta!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
         }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            Lote lote = new();
+            LoteTmp loteTmp = new();
+
+            lbCarrinho.Items.Clear();
+            valorTotal = 0;
+            txtPrecoTotal.Text = "R$ " + valorTotal.ToString("F2");
+
+
+            var listLote = lote.ListAll().Tables[0].AsEnumerable()
+                .Select(dataRow => new Lote
+                {
+                    idItemLote = dataRow.Field<int>("idItemLote"),
+                    qtdProd = dataRow.Field<int>("qtdProd"),
+                    idProduto = dataRow.Field<int>("idProdutoFK")
+                }).ToList();
+
+            foreach (var item in listLote)
+            {
+                loteTmp.qtdProdTmp = item.qtdProd;
+                loteTmp.idProdutoTmp = item.idProduto;
+                loteTmp.Edit();
+            }
+        } 
+        #endregion
 
         private void cmdVoltar_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-
+        
     }
 }
 

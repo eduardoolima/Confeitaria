@@ -34,7 +34,6 @@ namespace Confeitaria
             this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.verTodosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.produtosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastrarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.editarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -67,8 +66,7 @@ namespace Confeitaria
             // 
             this.clienteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cadastrarToolStripMenuItem,
-            this.editarToolStripMenuItem,
-            this.verTodosToolStripMenuItem});
+            this.editarToolStripMenuItem});
             this.clienteToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.clienteToolStripMenuItem.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
@@ -80,7 +78,7 @@ namespace Confeitaria
             // 
             this.cadastrarToolStripMenuItem.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.cadastrarToolStripMenuItem.Name = "cadastrarToolStripMenuItem";
-            this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(147, 26);
+            this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(191, 26);
             this.cadastrarToolStripMenuItem.Text = "Cadastrar";
             this.cadastrarToolStripMenuItem.Click += new System.EventHandler(this.cadastrarToolStripMenuItem_Click);
             // 
@@ -88,17 +86,9 @@ namespace Confeitaria
             // 
             this.editarToolStripMenuItem.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
-            this.editarToolStripMenuItem.Size = new System.Drawing.Size(147, 26);
-            this.editarToolStripMenuItem.Text = "Editar";
+            this.editarToolStripMenuItem.Size = new System.Drawing.Size(191, 26);
+            this.editarToolStripMenuItem.Text = "Editar ou Excluir";
             this.editarToolStripMenuItem.Click += new System.EventHandler(this.editarToolStripMenuItem_Click);
-            // 
-            // verTodosToolStripMenuItem
-            // 
-            this.verTodosToolStripMenuItem.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.verTodosToolStripMenuItem.Name = "verTodosToolStripMenuItem";
-            this.verTodosToolStripMenuItem.Size = new System.Drawing.Size(147, 26);
-            this.verTodosToolStripMenuItem.Text = "Relatório";
-            this.verTodosToolStripMenuItem.Click += new System.EventHandler(this.verTodosToolStripMenuItem_Click);
             // 
             // produtosToolStripMenuItem
             // 
@@ -160,7 +150,7 @@ namespace Confeitaria
             this.editarPedidoToolStripMenuItem.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.editarPedidoToolStripMenuItem.Name = "editarPedidoToolStripMenuItem";
             this.editarPedidoToolStripMenuItem.Size = new System.Drawing.Size(186, 26);
-            this.editarPedidoToolStripMenuItem.Text = "Editar Pedido";
+            this.editarPedidoToolStripMenuItem.Text = "Excluir Pedido";
             this.editarPedidoToolStripMenuItem.Click += new System.EventHandler(this.editarPedidoToolStripMenuItem_Click);
             // 
             // vendasToolStripMenuItem
@@ -229,7 +219,6 @@ namespace Confeitaria
         private System.Windows.Forms.ToolStripMenuItem clienteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cadastrarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem verTodosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem produtosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cadastrarToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem editarToolStripMenuItem1;

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data;
 
 namespace Confeitaria.Models
 
@@ -32,6 +27,12 @@ namespace Confeitaria.Models
         public void Delete(int id)
         {
             string sql = $"DELETE Pedido WHERE idPedido='{id}'";
+            dataBase.Execute(sql);
+        }
+
+        public void DeleteFKCompraFromPedido(int idCompra)
+        {
+            string sql = $"DELETE Pedido WHERE idCompraFK='{idCompra}'";
             dataBase.Execute(sql);
         }
         public void GetByidPedido(int id)
