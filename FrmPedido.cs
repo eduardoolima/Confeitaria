@@ -49,9 +49,13 @@ namespace Confeitaria
             CarregaCombo();
 
             qtdDisponivel = lot.qtdProd;
-            qtdDisponivelInicial = qtdDisponivel;
             numericUpDown1.Maximum = qtdDisponivel;
             lottmp.Delete();
+            lot.ListarDadosLote();
+            lottmp.qtdProdTmp = qtdDisponivel;
+            lottmp.idProdutoTmp = prod.idProduto;
+            lottmp.Add();
+            listProduto.Add(prod);
         }
 
         private void cmbCliente_SelectedIndexChanged(object sender, EventArgs e)
@@ -59,7 +63,6 @@ namespace Confeitaria
             client.IdCliente = Convert.ToInt32(cmbCliente.SelectedValue);
             client.ListById(client.IdCliente);
             
-            lbCarrinho.Items.Clear();
             numericUpDown1.Maximum = qtdDisponivelInicial;
             valorTotal = 0;
             txtPrecoTotal.Text = "R$ " + valorTotal.ToString("F2");
@@ -72,8 +75,9 @@ namespace Confeitaria
             txtPreco.Text = prod.precoProduto;
             lot.idProduto = prod.GetId(prod.nomeProduto);
             lot.ListarDadosLote();
+            qtdDisponivel = lottmp.qtdProdTmp;
             numericUpDown1.Value = 0;
-            numericUpDown1.Maximum = lot.qtdProd;
+            numericUpDown1.Maximum = lottmp.qtdProdTmp;
         }
 
         private void cmdFinalizar_Click(object sender, EventArgs e)
@@ -133,6 +137,7 @@ namespace Confeitaria
             numericUpDown1.Value = 0;
             txtPrecoTotal.Text = "R$ " + valorTotal.ToString("F2");
             numericUpDown1.Maximum = qtdDisponivel;
+            cmbCliente.Enabled = false;
         }
 
         private void cmdVoltar_Click(object sender, EventArgs e)
