@@ -23,5 +23,10 @@ namespace Confeitaria
             prod.nomeProduto = txtNome.Text;
             dataGridView1.DataSource = prod.ListByProductName().Tables[0];
         }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

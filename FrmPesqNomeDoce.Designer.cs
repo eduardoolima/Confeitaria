@@ -34,6 +34,7 @@ namespace Confeitaria
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.cmdPesquisar = new System.Windows.Forms.Button();
+            this.btnVoltar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,10 +63,10 @@ namespace Confeitaria
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(76, 97);
+            this.dataGridView1.Location = new System.Drawing.Point(76, 106);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(644, 331);
+            this.dataGridView1.Size = new System.Drawing.Size(644, 173);
             this.dataGridView1.TabIndex = 3;
             // 
             // cmdPesquisar
@@ -80,18 +81,32 @@ namespace Confeitaria
             this.cmdPesquisar.UseVisualStyleBackColor = false;
             this.cmdPesquisar.Click += new System.EventHandler(this.cmdPesquisar_Click);
             // 
+            // btnVoltar
+            // 
+            this.btnVoltar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnVoltar.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.btnVoltar.Location = new System.Drawing.Point(623, 299);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(165, 39);
+            this.btnVoltar.TabIndex = 33;
+            this.btnVoltar.Text = "Voltar";
+            this.btnVoltar.UseVisualStyleBackColor = false;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
+            // 
             // FrmPesqNomeDoce
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 350);
+            this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.cmdPesquisar);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNome);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmPesqNomeDoce";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pesquisar Nome Doce";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -105,5 +120,6 @@ namespace Confeitaria
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button cmdPesquisar;
+        private System.Windows.Forms.Button btnVoltar;
     }
 }

@@ -270,6 +270,7 @@ namespace Confeitaria
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmPedido";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pedido";
             this.Load += new System.EventHandler(this.FrmPedido_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();

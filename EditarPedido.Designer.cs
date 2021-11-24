@@ -100,6 +100,7 @@ namespace Confeitaria
             this.Controls.Add(this.label2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EditarPedido";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EditarPedido";
             this.Load += new System.EventHandler(this.EditarPedido_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

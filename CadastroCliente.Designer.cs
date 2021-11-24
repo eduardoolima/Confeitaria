@@ -327,6 +327,7 @@ namespace Confeitaria
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.Name = "CadastroCliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Cliente";
             this.ResumeLayout(false);
             this.PerformLayout();

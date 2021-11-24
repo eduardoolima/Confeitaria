@@ -52,7 +52,7 @@ namespace Confeitaria
             p.idProduto = Convert.ToInt32(cmbProdutos.SelectedValue);
             if (cmbProdutos.SelectedIndex > -1)
             {
-                p.ListById(p.idProduto);
+                p.GetById(p.idProduto);
                 txtNome.Text = p.nomeProduto;
                 txtPreco.Text = p.precoProduto;
                 txtDesc.Text = p.descricao;
@@ -119,8 +119,10 @@ namespace Confeitaria
             {
                 Produto p = new();
                 Lote l = new();
+                LoteTmp lt = new();
                 p.idProduto = Convert.ToInt32(cmbProdutos.SelectedValue);
                 l.idProduto = Convert.ToInt32(cmbProdutos.SelectedValue);
+                lt.Delete();
                 l.Delete(p.idProduto);
                 p.Delete(p.idProduto);
 
