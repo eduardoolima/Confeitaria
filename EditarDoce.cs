@@ -22,11 +22,12 @@ namespace Confeitaria
 
         private readonly string path = @"C:\Users\ricks\source\repos\Confeitaria\Logs\logError.txt";
 
-        private Produto p = new();
-        private Lote l = new();
+        //private Produto p = new();
+        //private Lote l = new();
         DBConect database = new();
         void CarregaCombo()
         {
+            Produto p = new();
             cmbProdutos.DisplayMember = "nomeProd";
             cmbProdutos.ValueMember = "idProduto";
             cmbProdutos.DataSource = p.ListarDados().Tables[0];
@@ -34,13 +35,20 @@ namespace Confeitaria
         }
         private void EditarDoce_Load(object sender, EventArgs e)
         {
-            cmbProdutos.SelectedIndex = -1;
+            try
+            {
+                cmbProdutos.SelectedIndex = -1;
+            }
+            catch { }
+           
             
             CarregaCombo();
             
         }
         private void cmbProdutos_SelectedIndexChanged(object sender, EventArgs e)
         {
+            Produto p = new();
+            Lote l = new();
             p.idProduto = Convert.ToInt32(cmbProdutos.SelectedValue);
             if (p.idProduto > 0)
             {
@@ -65,6 +73,8 @@ namespace Confeitaria
         {
             try
             {
+                Produto p = new();
+                Lote l = new();
                 p.nomeProduto = txtNome.Text;
                 p.precoProduto = txtPreco.Text;
                 p.descricao = txtDesc.Text;
@@ -98,6 +108,8 @@ namespace Confeitaria
         {
             try
             {
+                Produto p = new();
+                Lote l = new();
                 p.idProduto = Convert.ToInt32(cmbProdutos.SelectedValue);
                 l.idProduto = Convert.ToInt32(cmbProdutos.SelectedValue);
                 l.Delete();
