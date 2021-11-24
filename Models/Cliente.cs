@@ -101,7 +101,7 @@ namespace Confeitaria.Models
 
         public DataSet ListAllRelatorio()
         {
-            string sql = "select * from Cliente c INNER JOIN Telefone t on c.idCliente = t.idCliente";
+            string sql = "select c.nome, t.telefone from Cliente c INNER JOIN Telefone t on c.idCliente = t.idCliente";
             return dataBase.List(sql);
         }
 

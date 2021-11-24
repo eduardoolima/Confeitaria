@@ -88,12 +88,6 @@ namespace Confeitaria
             pesquisarDoce.ShowDialog();
         }
 
-        //private void vendasToolStripMenuItem1_Click(object sender, EventArgs e)
-        //{
-        //    FrmPedido frmPedido = new();
-        //    frmPedido.ShowDialog();
-        //}
-
         private void relatorioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Relatorio relatorio = new();
