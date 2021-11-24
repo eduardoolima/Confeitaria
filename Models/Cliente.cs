@@ -69,9 +69,9 @@ namespace Confeitaria.Models
             Cep = aux[7];
         }
 
-        public void GetByName(string name)
+        public void GetByClienteId(string id)
         {
-            string sql = $"select * from Cliente where nome = '{name}'";
+            string sql = $"select * from Cliente where idCliente = '{id}'";
             dataBase.Get(sql);
             string[] aux = dataBase.Campos.Split(';');            
             IdCliente = int.Parse(aux[0]);

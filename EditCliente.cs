@@ -41,7 +41,7 @@ namespace Confeitaria
             {
                 Cliente c = new();
                 Telefone t = new();
-                c.GetByName(dataGridView1[0, e.RowIndex].Value.ToString());
+                c.GetByClienteId(dataGridView1[0, e.RowIndex].Value.ToString());
                 clientId = c.IdCliente;
                 #region dadosPessoais
 

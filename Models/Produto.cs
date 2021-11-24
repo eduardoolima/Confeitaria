@@ -28,9 +28,9 @@ namespace Confeitaria.Models
             database.Execute(sql);
         }
         
-        public void Edit()
+        public void Edit(int id)
         {
-            string sql = $"update Produto set nomeProd = '{nomeProduto}', precoProd = '{precoProduto.Replace(",", ".")}', descricao = '{descricao}' where idProduto = '{idProduto}'";
+            string sql = $"update Produto set nomeProd = '{nomeProduto}', precoProd = '{precoProduto.Replace(",", ".")}', descricao = '{descricao}' where idProduto = '{id}'";
             database.Execute(sql);
         }
 

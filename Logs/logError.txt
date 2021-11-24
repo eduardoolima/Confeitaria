@@ -16,3 +16,6 @@ Erro ao executar comando SQL - 22/11/2021 21:56:58 - A instrução DELETE confli
 A instrução foi finalizada.
 Erro ao editar cliente - 22/11/2021 23:34:43 - Input string was not in a correct format.
 Erro ao editar cliente - 22/11/2021 23:34:51 - Input string was not in a correct format.
+Erro ao carregar as informações do cliente - 24/11/2021 19:24:10 - Input string was not in a correct format.
+Erro ao carregar as informações do cliente - 24/11/2021 19:28:07 - Input string was not in a correct format.
+Erro ao realizar o pedido - 24/11/2021 20:04:13 - Column 'qtdProd' does not belong to table Table.

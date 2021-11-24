@@ -20,11 +20,9 @@ namespace Confeitaria
             InitializeComponent();
         }
 
-        private readonly string path = @"C:\Users\ricks\source\repos\Confeitaria\Logs\logError.txt";
+        private readonly string path = @"C:\Unifenas\4periodo\AtvIntegradoras\Confeitaria\Logs\logError.txt";
 
-        //private Produto p = new();
-        //private Lote l = new();
-        DBConect database = new();
+        int idProduto = 0;
         void CarregaCombo()
         {
             Produto p = new();
@@ -49,10 +47,10 @@ namespace Confeitaria
         {
             Produto p = new();
             Lote l = new();
-            p.idProduto = Convert.ToInt32(cmbProdutos.SelectedValue);
+            idProduto = Convert.ToInt32(cmbProdutos.SelectedValue);
             if (cmbProdutos.SelectedIndex > -1)
             {
-                p.GetById(p.idProduto);
+                p.GetById(idProduto);
                 txtNome.Text = p.nomeProduto;
                 txtPreco.Text = p.precoProduto;
                 txtDesc.Text = p.descricao;
@@ -87,11 +85,11 @@ namespace Confeitaria
                 p.nomeProduto = txtNome.Text;
                 p.precoProduto = txtPreco.Text;
                 p.descricao = txtDesc.Text;
-                p.Edit();
+                p.Edit(idProduto);
                 l.dataFabricacao = dtpDataFab.Value;
                 l.dataValidade = dtpDataVenc.Value;
                 l.qtdProd = Convert.ToInt32(txtQtd.Text);                
-                l.Edit();
+                l.Edit(idProduto);
 
                 MessageBox.Show("Registro Editado com sucesso!");
                 txtNome.Clear();

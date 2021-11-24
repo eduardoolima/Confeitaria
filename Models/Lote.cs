@@ -26,9 +26,9 @@ namespace Confeitaria.Models
             string sql = $"insert into Lote(qtdProd, dataFabricacao, dataValidade, idProdutoFK) values( '{qtdProd}', '{dataFabricacao.Date}', '{dataValidade.Date}','{idProduto}')";
             database.Execute(sql);
         }
-        public void Edit()
+        public void Edit(int id)
         {
-            string sql = $"update Lote set qtdProd = '{qtdProd}', dataFabricacao = '{dataFabricacao}', dataValidade = '{dataValidade}' where idProdutoFK = '{idProduto}'";
+            string sql = $"update Lote set qtdProd = '{qtdProd}', dataFabricacao = '{dataFabricacao}', dataValidade = '{dataValidade}' where idProdutoFK = '{id}'";
             database.Execute(sql);
         }
         public void Delete(int id)

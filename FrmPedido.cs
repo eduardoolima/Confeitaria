@@ -133,7 +133,7 @@ namespace Confeitaria
                     }
                     
                     pedido.Add();
-                    lote.Edit();
+                    lote.Edit(produto.idProduto);
 
                     MessageBox.Show("Pedido Realizado!");
                     loteTmp.Delete();
@@ -219,7 +219,10 @@ namespace Confeitaria
 
         private void cmdVoltar_Click(object sender, EventArgs e)
         {
+            LoteTmp lt = new();
+            lt.Delete();
             Close();
+
         }
 
         

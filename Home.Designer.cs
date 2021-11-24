@@ -34,6 +34,7 @@ namespace Confeitaria
             this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.relatorioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.produtosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cadastrarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.editarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -67,7 +68,8 @@ namespace Confeitaria
             // 
             this.clienteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.cadastrarToolStripMenuItem,
-            this.editarToolStripMenuItem});
+            this.editarToolStripMenuItem,
+            this.relatorioToolStripMenuItem});
             this.clienteToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.clienteToolStripMenuItem.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
@@ -90,6 +92,14 @@ namespace Confeitaria
             this.editarToolStripMenuItem.Size = new System.Drawing.Size(191, 26);
             this.editarToolStripMenuItem.Text = "Editar ou Excluir";
             this.editarToolStripMenuItem.Click += new System.EventHandler(this.editarToolStripMenuItem_Click);
+            // 
+            // relatorioToolStripMenuItem
+            // 
+            this.relatorioToolStripMenuItem.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.relatorioToolStripMenuItem.Name = "relatorioToolStripMenuItem";
+            this.relatorioToolStripMenuItem.Size = new System.Drawing.Size(191, 26);
+            this.relatorioToolStripMenuItem.Text = "Relatorio";
+            this.relatorioToolStripMenuItem.Click += new System.EventHandler(this.relatorioToolStripMenuItem_Click);
             // 
             // produtosToolStripMenuItem
             // 
@@ -151,7 +161,7 @@ namespace Confeitaria
             // 
             this.venderToolStripMenuItem.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.venderToolStripMenuItem.Name = "venderToolStripMenuItem";
-            this.venderToolStripMenuItem.Size = new System.Drawing.Size(186, 26);
+            this.venderToolStripMenuItem.Size = new System.Drawing.Size(240, 26);
             this.venderToolStripMenuItem.Text = "Realizar Pedido";
             this.venderToolStripMenuItem.Click += new System.EventHandler(this.venderToolStripMenuItem_Click_1);
             // 
@@ -159,8 +169,8 @@ namespace Confeitaria
             // 
             this.editarPedidoToolStripMenuItem.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.editarPedidoToolStripMenuItem.Name = "editarPedidoToolStripMenuItem";
-            this.editarPedidoToolStripMenuItem.Size = new System.Drawing.Size(186, 26);
-            this.editarPedidoToolStripMenuItem.Text = "Excluir Pedido";
+            this.editarPedidoToolStripMenuItem.Size = new System.Drawing.Size(240, 26);
+            this.editarPedidoToolStripMenuItem.Text = "Listar ou Excluir Pedido";
             this.editarPedidoToolStripMenuItem.Click += new System.EventHandler(this.editarPedidoToolStripMenuItem_Click);
             // 
             // vendasToolStripMenuItem
@@ -244,6 +254,7 @@ namespace Confeitaria
         private System.Windows.Forms.ToolStripMenuItem venderToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem editarPedidoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pesquisarPorDataFabToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem relatorioToolStripMenuItem;
     }
 }
 

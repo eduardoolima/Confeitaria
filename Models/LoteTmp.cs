@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,5 +37,12 @@ namespace Confeitaria.Models
             string[] aux = database.Campos.Split(';');
             qtdProdTmp = int.Parse(aux[0]);
         }
+
+        public DataSet ListAll()
+        {
+            string sql = "select * from LoteTmp";
+            return database.List(sql);
+        }
+
     }
 }
