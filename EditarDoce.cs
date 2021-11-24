@@ -81,9 +81,8 @@ namespace Confeitaria
                 using (StreamWriter sw = File.AppendText(path))
                 {
                     sw.WriteLine("Erro ao editar produto - " + DateTime.Now.ToString() + " - " + ex.Message.ToString());
-                    MessageBox.Show("Aí eu vou ter q trucar pra cima docê uai");
                 }
-
+                MessageBox.Show("Houve um erro ao editar as informações do doce!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -111,9 +110,8 @@ namespace Confeitaria
                 using (StreamWriter sw = File.AppendText(path))
                 {
                     sw.WriteLine("Erro ao Excluir produto - " + DateTime.Now.ToString() + " - " + ex.Message.ToString());
-                    MessageBox.Show("o monte d bosta? vc ta bem?");
                 }
-
+                MessageBox.Show("Houve um erro ao Excluir as informações do doce!", "Erro!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

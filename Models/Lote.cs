@@ -14,6 +14,7 @@ namespace Confeitaria.Models
         public DateTime dataFabricacao { get; set; }
         public DateTime dataValidade { get; set; }
         public int idProduto { get; set; }
+        public string dataFab { get; set; }
 
         DBConect database = new();
 
@@ -44,6 +45,12 @@ namespace Confeitaria.Models
             qtdProd = int.Parse(aux[1]);
             dataFabricacao = DateTime.Parse(aux[2]);
             dataValidade = DateTime.Parse(aux[3]);
+        }
+        public DataSet ListarporData()
+        {
+            string sql = $"select * from Produto p join Lote l on p.idProduto = l.idProduto where l.dataFabricacao = '{dataFabricacao}'";
+            database.List(sql);
+            return database.ds;
         }
     }
 }
