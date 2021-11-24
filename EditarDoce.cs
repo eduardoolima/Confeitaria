@@ -50,7 +50,7 @@ namespace Confeitaria
             Produto p = new();
             Lote l = new();
             p.idProduto = Convert.ToInt32(cmbProdutos.SelectedValue);
-            if (p.idProduto > 0)
+            if (cmbProdutos.SelectedIndex > -1)
             {
                 p.ListById(p.idProduto);
                 txtNome.Text = p.nomeProduto;
@@ -61,6 +61,15 @@ namespace Confeitaria
                 txtQtd.Text = l.qtdProd.ToString();
                 dtpDataFab.Value = l.dataFabricacao;
                 dtpDataVenc.Value = l.dataValidade;
+            }
+            else
+            {
+                txtNome.Text = "";
+                txtPreco.Text = "";
+                txtDesc.Text = "";
+                txtQtd.Text = "";
+                dtpDataFab.Value = DateTime.Now;
+                dtpDataVenc.Value = DateTime.Now;
             }
             
         }
