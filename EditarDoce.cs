@@ -30,23 +30,31 @@ namespace Confeitaria
             cmbProdutos.DisplayMember = "nomeProd";
             cmbProdutos.ValueMember = "idProduto";
             cmbProdutos.DataSource = p.ListarDados().Tables[0];
+            cmbProdutos.SelectedValue = 0;
         }
         private void EditarDoce_Load(object sender, EventArgs e)
         {
+            cmbProdutos.SelectedIndex = -1;
+            
             CarregaCombo();
+            
         }
         private void cmbProdutos_SelectedIndexChanged(object sender, EventArgs e)
         {
             p.idProduto = Convert.ToInt32(cmbProdutos.SelectedValue);
-            p.ListById(p.idProduto);
-            txtNome.Text = p.nomeProduto;
-            txtPreco.Text = p.precoProduto;
-            txtDesc.Text = p.descricao;
-            l.idProduto = p.GetId(p.nomeProduto);
-            l.ListarDadosLote();
-            txtQtd.Text = l.qtdProd.ToString();
-            dtpDataFab.Value = l.dataFabricacao;
-            dtpDataVenc.Value = l.dataValidade;
+            if (p.idProduto > 0)
+            {
+                p.ListById(p.idProduto);
+                txtNome.Text = p.nomeProduto;
+                txtPreco.Text = p.precoProduto;
+                txtDesc.Text = p.descricao;
+                l.idProduto = p.GetId(p.nomeProduto);
+                l.ListarDadosLote();
+                txtQtd.Text = l.qtdProd.ToString();
+                dtpDataFab.Value = l.dataFabricacao;
+                dtpDataVenc.Value = l.dataValidade;
+            }
+            
         }
         private void btnVoltar_Click(object sender, EventArgs e)
         {

@@ -17,7 +17,7 @@ namespace Confeitaria
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PesquisarDoce());
+            Application.Run(new EditarDoce());
         }
     }
 }

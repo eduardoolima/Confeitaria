@@ -22,7 +22,7 @@ namespace Confeitaria
             try
             {
                 string s = "";
-                s = @"localhost;Database=Confeitaria;UID=sa;PWD=123456789";
+                s = @"Server=localhost;Database=Confeitaria;UID=sa;PWD=12345678";
                 cn.ConnectionString = s;
                 cn.Open();
             }

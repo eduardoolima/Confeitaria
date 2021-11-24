@@ -54,10 +54,11 @@ namespace Confeitaria.Models
         }
         public void ListById(int id)
         {
-            string sql = $"select * from Produto p join Lote l on p.idProduto = l.idProduto where p.idProduto = '{id}'";
+            string sql = $"select * from Produto p join Lote l on p.idProduto = l.idProdutoFK where p.idProduto = '{id}'";
             database.Get(sql);
             string[] aux;
             aux = database.Campos.Split(';');
+            idProduto = int.Parse(aux[0]);
             nomeProduto = aux[1];
             precoProduto = aux[2];
             descricao = aux[3];

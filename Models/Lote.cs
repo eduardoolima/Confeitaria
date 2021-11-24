@@ -24,22 +24,22 @@ namespace Confeitaria.Models
         
         public void Add()
         {
-            string sql = $"insert into Lote(qtdProd, dataFabricacao, dataValidade, idProduto) values( '{qtdProd}', '{dataFabricacao.Date}', '{dataValidade.Date}','{idProduto.ToString()}')";
+            string sql = $"insert into Lote(qtdProd, dataFabricacao, dataValidade, idProdutoFK) values( '{qtdProd}', '{dataFabricacao.Date}', '{dataValidade.Date}','{idProduto.ToString()}')";
             database.Execute(sql);
         }
         public void Edit()
         {
-            string sql = $"update Lote set qtdProd = '{qtdProd}', dataFabricacao = '{dataFabricacao}', dataValidade = '{dataValidade}' where idProduto = '{idProduto.ToString()}'";
+            string sql = $"update Lote set qtdProd = '{qtdProd}', dataFabricacao = '{dataFabricacao}', dataValidade = '{dataValidade}' where idProdutoFK = '{idProduto.ToString()}'";
             database.Execute(sql);
         }
         public void Delete()
         {
-            string sql = $"delete from Lote where idProduto = {idProduto.ToString()}";
+            string sql = $"delete from Lote where idProdutoFK = {idProduto.ToString()}";
             database.Execute(sql);
         }
         public void ListarDadosLote()
         {
-            string sql = $"select * from Lote l join Produto p on l.idProduto = p.idProduto where l.idProduto = '{idProduto.ToString()}'";
+            string sql = $"select * from Lote l join Produto p on l.idProdutoFK = p.idProduto where l.idProdutoFK = '{idProduto.ToString()}'";
             database.Get(sql);
             string[] aux = database.Campos.Split(';');
             qtdProd = int.Parse(aux[1]);
@@ -48,7 +48,7 @@ namespace Confeitaria.Models
         }
         public DataSet ListarporData()
         {
-            string sql = $"select * from Produto p join Lote l on p.idProduto = l.idProduto where l.dataFabricacao = '{dataFabricacao}'";
+            string sql = $"select * from Produto p join Lote l on p.idProduto = l.idProdutoFK where l.dataFabricacao = '{dataFabricacao}'";
             database.List(sql);
             return database.ds;
         }

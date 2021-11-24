@@ -80,3 +80,12 @@ Erro ao executar comando SQL - 15/11/2021 18:58:57 - Nome de coluna 'idLote' inv
 Erro ao Excluir produto - 15/11/2021 18:58:57 - Exception of type 'System.Exception' was thrown.
 Erro ao estabelecer conexão com o Banco de dados - 24/11/2021 00:26:26 - Keyword not supported: 'localhost;database'.
 Erro no comando SQL (LIST)- 24/11/2021 00:26:26 - Exception of type 'System.Exception' was thrown.
+Erro ao estabelecer conexão com o Banco de dados - 24/11/2021 00:29:27 - Falha de logon do usuário 'sa'.
+Erro no comando SQL (LIST)- 24/11/2021 00:29:27 - Exception of type 'System.Exception' was thrown.
+Erro ao Pesquisar produto - 24/11/2021 00:29:27 - Exception of type 'System.Exception' was thrown.
+Erro no comando SQL (GET)- 24/11/2021 00:37:07 - Nome de coluna 'idProduto' inválido.
+Erro no comando SQL (GET)- 24/11/2021 00:37:07 - Nome de coluna 'idProduto' inválido.
+Erro no comando SQL (GET)- 24/11/2021 00:37:17 - Nome de coluna 'idProduto' inválido.
+Erro no comando SQL (GET)- 24/11/2021 00:37:17 - Nome de coluna 'idProduto' inválido.
+Erro ao executar comando SQL - 24/11/2021 00:41:00 - Erro de estouro aritmético ao converter varchar no tipo de dados numeric.
+A instrução foi finalizada.
