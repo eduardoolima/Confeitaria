@@ -7,7 +7,7 @@ namespace Confeitaria
 {
     class DBConect
     {
-        private readonly string path = @"C:\Users\Fabio\source\repos\Confeitaria\Logs\logError.txt";
+        private readonly string path = @"C:\Unifenas\4periodo\AtvIntegradoras\Confeitaria\Logs\logError.txt";
 
         private SqlConnection cn = new();
         private SqlCommand cmd = new();
@@ -22,7 +22,7 @@ namespace Confeitaria
             try
             {
                 string s = "";
-                s = @"SERVER=DESKTOP-99SVNVC\SQLEXPRESS;Database=Confeitaria;UID=sa;PWD=123";
+                s = @"localhost;Database=Confeitaria;UID=sa;PWD=123456789";
                 cn.ConnectionString = s;
                 cn.Open();
             }

@@ -78,3 +78,5 @@ A instrução foi finalizada.
 Erro ao Excluir produto - 15/11/2021 18:57:19 - Exception of type 'System.Exception' was thrown.
 Erro ao executar comando SQL - 15/11/2021 18:58:57 - Nome de coluna 'idLote' inválido.
 Erro ao Excluir produto - 15/11/2021 18:58:57 - Exception of type 'System.Exception' was thrown.
+Erro ao estabelecer conexão com o Banco de dados - 24/11/2021 00:26:26 - Keyword not supported: 'localhost;database'.
+Erro no comando SQL (LIST)- 24/11/2021 00:26:26 - Exception of type 'System.Exception' was thrown.
