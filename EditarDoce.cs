@@ -121,8 +121,8 @@ namespace Confeitaria
                 Lote l = new();
                 p.idProduto = Convert.ToInt32(cmbProdutos.SelectedValue);
                 l.idProduto = Convert.ToInt32(cmbProdutos.SelectedValue);
-                l.Delete();
-                p.Delete();
+                l.Delete(p.idProduto);
+                p.Delete(p.idProduto);
 
                 MessageBox.Show("Registro Excluir com sucesso!");
                 txtNome.Clear();

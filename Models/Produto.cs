@@ -33,9 +33,9 @@ namespace Confeitaria.Models
             database.Execute(sql);
         }
 
-        public void Delete()
+        public void Delete(int id)
         {
-            string sql = $"delete from Produto where idProduto = '{idProduto}'";
+            string sql = $"delete from Produto where idProduto = '{id}'";
             database.Execute(sql);
         }
         public DataSet ListByProductName()

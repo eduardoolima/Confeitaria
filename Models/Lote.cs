@@ -32,9 +32,9 @@ namespace Confeitaria.Models
             string sql = $"update Lote set qtdProd = '{qtdProd}', dataFabricacao = '{dataFabricacao}', dataValidade = '{dataValidade}' where idProdutoFK = '{idProduto.ToString()}'";
             database.Execute(sql);
         }
-        public void Delete()
+        public void Delete(int id)
         {
-            string sql = $"delete from Lote where idProdutoFK = {idProduto.ToString()}";
+            string sql = $"delete from Lote where idProdutoFK = '{id}'";
             database.Execute(sql);
         }
         public void ListarDadosLote()
