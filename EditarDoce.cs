@@ -20,32 +20,58 @@ namespace Confeitaria
             InitializeComponent();
         }
 
-        private readonly string path = @"C:\Users\Fabio\source\repos\Confeitaria\Logs\logError.txt";
-        private Produto p = new();
-        private Lote l = new();
+        private readonly string path = @"C:\Users\ricks\source\repos\Confeitaria\Logs\logError.txt";
+
+        //private Produto p = new();
+        //private Lote l = new();
         DBConect database = new();
         void CarregaCombo()
         {
+            Produto p = new();
             cmbProdutos.DisplayMember = "nomeProd";
             cmbProdutos.ValueMember = "idProduto";
             cmbProdutos.DataSource = p.ListarDados().Tables[0];
+            cmbProdutos.SelectedValue = 0;
         }
         private void EditarDoce_Load(object sender, EventArgs e)
         {
+            try
+            {
+                cmbProdutos.SelectedIndex = -1;
+            }
+            catch { }
+           
+            
             CarregaCombo();
+            
         }
         private void cmbProdutos_SelectedIndexChanged(object sender, EventArgs e)
         {
+            Produto p = new();
+            Lote l = new();
             p.idProduto = Convert.ToInt32(cmbProdutos.SelectedValue);
-            p.GetById(p.idProduto);
-            txtNome.Text = p.nomeProduto;
-            txtPreco.Text = p.precoProduto;
-            txtDesc.Text = p.descricao;
-            l.idProduto = p.GetId(p.nomeProduto);
-            l.ListarDadosLote();
-            txtQtd.Text = l.qtdProd.ToString();
-            dtpDataFab.Value = l.dataFabricacao;
-            dtpDataVenc.Value = l.dataValidade;
+            if (cmbProdutos.SelectedIndex > -1)
+            {
+                p.GetById(p.idProduto);
+                txtNome.Text = p.nomeProduto;
+                txtPreco.Text = p.precoProduto;
+                txtDesc.Text = p.descricao;
+                l.idProduto = p.GetId(p.nomeProduto);
+                l.ListarDadosLote();
+                txtQtd.Text = l.qtdProd.ToString();
+                dtpDataFab.Value = l.dataFabricacao;
+                dtpDataVenc.Value = l.dataValidade;
+            }
+            else
+            {
+                txtNome.Text = "";
+                txtPreco.Text = "";
+                txtDesc.Text = "";
+                txtQtd.Text = "";
+                dtpDataFab.Value = DateTime.Now;
+                dtpDataVenc.Value = DateTime.Now;
+            }
+            
         }
         private void btnVoltar_Click(object sender, EventArgs e)
         {
@@ -56,6 +82,8 @@ namespace Confeitaria
         {
             try
             {
+                Produto p = new();
+                Lote l = new();
                 p.nomeProduto = txtNome.Text;
                 p.precoProduto = txtPreco.Text;
                 p.descricao = txtDesc.Text;
@@ -89,10 +117,14 @@ namespace Confeitaria
         {
             try
             {
+                Produto p = new();
+                Lote l = new();
+                LoteTmp lt = new();
                 p.idProduto = Convert.ToInt32(cmbProdutos.SelectedValue);
                 l.idProduto = Convert.ToInt32(cmbProdutos.SelectedValue);
-                l.Delete();
-                p.Delete();
+                lt.Delete();
+                l.Delete(p.idProduto);
+                p.Delete(p.idProduto);
 
                 MessageBox.Show("Registro Excluir com sucesso!");
                 txtNome.Clear();

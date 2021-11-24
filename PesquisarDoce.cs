@@ -19,7 +19,7 @@ namespace Confeitaria
             InitializeComponent();
         }
         Lote l = new Lote();
-        private readonly string path = @"C:\Users\ricks\source\repos\Confeitaria\Logs\logError.txt";
+        private readonly string path = @"C:\Unifenas\4periodo\AtvIntegradoras\Confeitaria\Logs\logError.txt";
 
         private void cmdPesquisar_Click_1(object sender, EventArgs e)
         {

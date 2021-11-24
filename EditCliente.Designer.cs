@@ -393,6 +393,7 @@ namespace Confeitaria
             this.Controls.Add(this.lblNomeCliente);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EditCliente";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Editar Cliente";
             this.Load += new System.EventHandler(this.EditCliente_Load);
             this.pnlView.ResumeLayout(false);

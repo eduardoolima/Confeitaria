@@ -63,10 +63,10 @@ namespace Confeitaria
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(69, 155);
+            this.dataGridView1.Location = new System.Drawing.Point(76, 106);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(644, 49);
+            this.dataGridView1.Size = new System.Drawing.Size(644, 173);
             this.dataGridView1.TabIndex = 3;
             // 
             // cmdPesquisar
@@ -85,7 +85,7 @@ namespace Confeitaria
             // 
             this.btnVoltar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnVoltar.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.btnVoltar.Location = new System.Drawing.Point(623, 399);
+            this.btnVoltar.Location = new System.Drawing.Point(623, 299);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(165, 39);
             this.btnVoltar.TabIndex = 33;
@@ -98,7 +98,7 @@ namespace Confeitaria
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 350);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.cmdPesquisar);
             this.Controls.Add(this.dataGridView1);
@@ -106,6 +106,7 @@ namespace Confeitaria
             this.Controls.Add(this.txtNome);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmPesqNomeDoce";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pesquisar Nome Doce";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

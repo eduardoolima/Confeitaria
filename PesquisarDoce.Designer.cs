@@ -39,6 +39,7 @@ namespace Confeitaria
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(28, 83);
             this.dataGridView1.Name = "dataGridView1";
@@ -48,9 +49,9 @@ namespace Confeitaria
             // 
             // cmdPesquisar
             // 
-            this.cmdPesquisar.BackColor = System.Drawing.Color.DarkSlateBlue;
+            this.cmdPesquisar.BackColor = System.Drawing.Color.GhostWhite;
             this.cmdPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.cmdPesquisar.ForeColor = System.Drawing.Color.GhostWhite;
+            this.cmdPesquisar.ForeColor = System.Drawing.Color.DarkSlateBlue;
             this.cmdPesquisar.Location = new System.Drawing.Point(574, 23);
             this.cmdPesquisar.Name = "cmdPesquisar";
             this.cmdPesquisar.Size = new System.Drawing.Size(118, 41);
@@ -90,6 +91,7 @@ namespace Confeitaria
             this.Controls.Add(this.dataGridView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PesquisarDoce";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PesquisarDoce";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

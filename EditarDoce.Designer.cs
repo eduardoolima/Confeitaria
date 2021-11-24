@@ -258,6 +258,7 @@ namespace Confeitaria
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "EditarDoce";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EditarDoce";
             this.Load += new System.EventHandler(this.EditarDoce_Load);
             this.ResumeLayout(false);

@@ -31,10 +31,9 @@ namespace Confeitaria.Models
             string sql = $"update Lote set qtdProd = '{qtdProd}', dataFabricacao = '{dataFabricacao}', dataValidade = '{dataValidade}' where idProdutoFK = '{idProduto}'";
             database.Execute(sql);
         }
-
-        public void Delete()
+        public void Delete(int id)
         {
-            string sql = $"delete from Lote where idProdutoFK = {idProduto}";
+            string sql = $"delete from Lote where idProdutoFK = '{id}'";
             database.Execute(sql);
         }
         
@@ -67,7 +66,7 @@ namespace Confeitaria.Models
         }
         public DataSet ListarporData()
         {
-            string sql = $"select * from Produto p join Lote l on p.idProduto = l.idProduto where l.dataFabricacao = '{dataFabricacao}'";
+            string sql = $"select * from Produto p join Lote l on p.idProduto = l.idProdutoFK where l.dataFabricacao = '{dataFabricacao}'";
             database.List(sql);
             return database.ds;
         }
