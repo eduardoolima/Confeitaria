@@ -20,6 +20,7 @@ namespace Confeitaria.Models
 
         public Produto()
         {
+
         }
         public void Add()
         {
@@ -40,7 +41,7 @@ namespace Confeitaria.Models
         }
         public DataSet ListByProductName()
         {
-            string sql = $"select * from Produto p join Lote l on p.idProduto = l.idProduto where nomeProd = '{nomeProduto}'";
+            string sql = $"select nomeProd, precoProd, descricao, qtdProd, dataFabricacao, dataValidade from Produto p join Lote l on p.idProduto = l.idProdutoFK where nomeProd like '%{nomeProduto}%'";
             return database.List(sql);
         }
 
@@ -52,9 +53,9 @@ namespace Confeitaria.Models
             idProduto = int.Parse(aux[0]);
             return idProduto;
         }
-        public void ListById(int id)
+        public void GetById(int id)
         {
-            string sql = $"select * from Produto p join Lote l on p.idProduto = l.idProduto where p.idProduto = '{id}'";
+            string sql = $"select * from Produto p join Lote l on p.idProduto = l.idProdutoFK where p.idProduto = '{id}'";
             database.Get(sql);
             string[] aux;
             aux = database.Campos.Split(';');
@@ -64,6 +65,17 @@ namespace Confeitaria.Models
             l.qtdProd = int.Parse(aux[5]);
             l.dataFabricacao = DateTime.Parse(aux[6]);
             l.dataValidade = DateTime.Parse(aux[7]);
+        }
+
+        public void GetByName(string nome)
+        {
+            string sql = $"select idProduto, nomeProd, PrecoProd from Produto where nomeProd = '{nome}'";
+            database.Get(sql);
+            string[] aux;
+            aux = database.Campos.Split(';');
+            idProduto = int.Parse(aux[0]);
+            nomeProduto = aux[1];
+            precoProduto = aux[2];            
         }
 
         public DataSet ListarDados()

@@ -10,6 +10,7 @@ namespace Confeitaria.Models
 {
     class Cliente
     {
+        private readonly string path = @"C:\Users\Fabio\source\repos\Confeitaria\Logs\logError.txt";
         #region propriedades
 
         public int IdCliente { get; set; }  
@@ -94,9 +95,25 @@ namespace Confeitaria.Models
 
         public DataSet ListAll()
         {
-            string sql = "select nome, email, dataNascimento, rua, numEndereco, cidade, cep from Cliente";
+            string sql = "select * from Cliente";
             return dataBase.List(sql);
-        } 
+        }
+
+        public DataSet ListAllRelatorio()
+        {
+            string sql = "select * from Cliente c INNER JOIN Telefone t on c.idCliente = t.idCliente";
+            return dataBase.List(sql);
+        }
+
+        public void ListById(int id)
+        {
+            string sql = $"SELECT idCliente nome FROM Cliente where idCliente='{IdCliente}'";
+            dataBase.Get(sql);
+            string[] aux = dataBase.Campos.Split(';');
+            IdCliente = int.Parse(aux[0]);
+            Nome = aux[1];
+        }
+
         #endregion
 
     }

@@ -24,44 +24,62 @@ namespace Confeitaria
 
         private void cadastrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CadastroCliente cadastroCliente = new();
+            CadastroCliente cadastroCliente = new CadastroCliente();
             cadastroCliente.ShowDialog();
         }
 
         private void venderToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CadastroCliente cadastroCliente = new();
+            CadastroCliente cadastroCliente = new CadastroCliente();
             cadastroCliente.ShowDialog();
-        }
-
-        private void venderToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-            //Pedido vender = new();
-            //vender.ShowDialog();
         }
 
         private void editarVendaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            EditarPedido editarPedido = new();
+            EditarPedido editarPedido = new EditarPedido();
             editarPedido.ShowDialog();
         }
 
         private void cadastrarToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            CadastroDoces cadastrar = new();
+            CadastroDoces cadastrar = new CadastroDoces();
             cadastrar.ShowDialog();
         }
 
         private void editarToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            EditarDoce editarDoce = new();
+            EditarDoce editarDoce = new EditarDoce();
             editarDoce.ShowDialog();
+        }
+
+        private void venderToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            FrmPedido pedido = new FrmPedido();
+            pedido.ShowDialog();
+        }
+
+        private void verTodosToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FrmPesqNomeDoce pesquisa = new FrmPesqNomeDoce();
+            pesquisa.ShowDialog();
+        }
+
+        private void verTodosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Relatorio relatorio = new Relatorio();
+            relatorio.ShowDialog();
         }
 
         private void editarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            EditCliente editCliente = new();
-            editCliente.ShowDialog();
+            EditCliente editarCliente = new EditCliente();
+            editarCliente.ShowDialog();
+        }
+
+        private void editarPedidoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditarPedido editarPedido = new EditarPedido();
+            editarPedido.ShowDialog();
         }
     }
 }

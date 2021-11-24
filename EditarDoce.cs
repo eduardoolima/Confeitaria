@@ -20,8 +20,7 @@ namespace Confeitaria
             InitializeComponent();
         }
 
-        private readonly string path = @"C:\Users\ricks\source\repos\Confeitaria\Logs\logError.txt";
-
+        private readonly string path = @"C:\Users\Fabio\source\repos\Confeitaria\Logs\logError.txt";
         private Produto p = new();
         private Lote l = new();
         DBConect database = new();
@@ -38,7 +37,7 @@ namespace Confeitaria
         private void cmbProdutos_SelectedIndexChanged(object sender, EventArgs e)
         {
             p.idProduto = Convert.ToInt32(cmbProdutos.SelectedValue);
-            p.ListById(p.idProduto);
+            p.GetById(p.idProduto);
             txtNome.Text = p.nomeProduto;
             txtPreco.Text = p.precoProduto;
             txtDesc.Text = p.descricao;

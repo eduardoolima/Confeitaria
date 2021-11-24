@@ -75,7 +75,6 @@ namespace Confeitaria
                 cmd.CommandText = sql;
 
                 SqlDataReader dr = cmd.ExecuteReader();
-                //campos = "";
                 if (dr.Read())
                 {
                     for (int i = 0; i < dr.FieldCount; i++)
@@ -130,6 +129,6 @@ namespace Confeitaria
             dr = cmd.ExecuteReader();
             Disconnect();
         }
-        
+
     }
 }
